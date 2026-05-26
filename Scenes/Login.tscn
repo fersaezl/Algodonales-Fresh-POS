@@ -188,7 +188,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 theme_override_colors/font_placeholder_color = Color(0.6174542, 0.6174552, 0.61745435, 0.6)
 theme_override_fonts/font = ExtResource("3_1baen")
 theme_override_styles/normal = SubResource("StyleBoxFlat_bhoxy")
@@ -205,6 +205,7 @@ theme_override_fonts/font = ExtResource("3_1baen")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7p2kr")
 placeholder_text = "Password"
 alignment = 1
+secret = true
 
 [node name="Login" type="Button" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=1573542519]
 custom_minimum_size = Vector2(300, 30)
