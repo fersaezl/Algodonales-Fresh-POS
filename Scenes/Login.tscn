@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://7cb4akfctqwg"]
 
+[ext_resource type="Script" uid="uid://51panwb1i65d" path="res://Scenes/login.gd" id="1_leum0"]
 [ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_xklxs"]
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="3_1baen"]
 
@@ -55,7 +56,26 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1u07"]
-bg_color = Color(0.3882353, 0.8745098, 0.41568628, 1)
+bg_color = Color(0.17423734, 0.28275663, 0.19068897, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgmcn"]
+bg_color = Color(0.2918229, 0.44939178, 0.3153571, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Login" type="Control" unique_id=719626092]
 layout_mode = 3
@@ -64,6 +84,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_leum0")
+error_empty = "Please fill in all fields"
+error_invalid = "Invalid user or password"
 
 [node name="Background" type="Panel" parent="." unique_id=1323445443]
 layout_mode = 1
@@ -165,6 +188,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_placeholder_color = Color(0.6174542, 0.6174552, 0.61745435, 0.6)
 theme_override_fonts/font = ExtResource("3_1baen")
 theme_override_styles/normal = SubResource("StyleBoxFlat_bhoxy")
@@ -191,6 +215,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_1baen")
 theme_override_styles/normal = SubResource("StyleBoxFlat_a6huy")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g1u07")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sgmcn")
 text = "Login"
 
 [node name="CheckBox" type="CheckBox" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=284024899]
@@ -198,8 +223,24 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+theme_override_colors/font_pressed_color = Color(0.38170326, 0.38170323, 0.38170323, 1)
+theme_override_colors/font_hover_color = Color(0.49354583, 0.4935454, 0.4935456, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.49411765, 0.49411765, 0.49411765, 1)
+theme_override_colors/icon_pressed_color = Color(0.38039216, 0.38039216, 0.38039216, 1)
+theme_override_colors/icon_hover_color = Color(0.49411765, 0.49411765, 0.49411765, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.49411765, 0.49411765, 0.49411765, 1)
+theme_override_colors/icon_disabled_color = Color(0.49411765, 0.49411765, 0.49411765, 1)
 theme_override_fonts/font = ExtResource("3_1baen")
+theme_override_colors/checkbox_checked_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+theme_override_colors/checkbox_unchecked_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 text = "Keep session?"
+
+[node name="ErrorLabel" type="Label" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=463250586]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.8, 0.13333334, 0.13333334, 1)
+theme_override_font_sizes/font_size = 13
 
 [node name="Label" type="Label" parent="." unique_id=1183669]
 layout_mode = 0
@@ -210,3 +251,5 @@ offset_bottom = 643.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_1baen")
 text = "© 2026 Algodonales Fresh POS"
+
+[connection signal="pressed" from="CenterContainer/mainCard/HBox/RightPanel/Login" to="." method="_on_login_pressed"]
