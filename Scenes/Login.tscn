@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://7cb4akfctqwg"]
+
+[ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_xklxs"]
+[ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="3_1baen"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_767d8"]
+bg_color = Color(0.92941177, 0.9529412, 0.92941177, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xklxs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.08)
+shadow_size = 20
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1baen"]
+bg_color = Color(0.92941177, 0.9529412, 0.92941177, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhoxy"]
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p2kr"]
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6huy"]
+bg_color = Color(0.3898353, 0.577796, 0.41488436, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1u07"]
+bg_color = Color(0.3882353, 0.8745098, 0.41568628, 1)
+
+[node name="Login" type="Control" unique_id=719626092]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="." unique_id=1323445443]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_767d8")
+
+[node name="DateTimeBar" type="HBoxContainer" parent="." unique_id=1534984857]
+layout_mode = 0
+offset_left = 933.0
+offset_top = 576.0
+offset_right = 1047.0
+offset_bottom = 604.0
+
+[node name="DatePanel" type="Panel" parent="DateTimeBar" unique_id=1676462904]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DateTimeBar/DatePanel" unique_id=554365139]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TimePanel" type="Panel" parent="DateTimeBar" unique_id=687104322]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DateTimeBar/TimePanel" unique_id=1714533313]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1312970155]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mainCard" type="Panel" parent="CenterContainer" unique_id=1104808976]
+custom_minimum_size = Vector2(960, 580)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xklxs")
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/mainCard" unique_id=2017934401]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="Panel" parent="CenterContainer/mainCard/HBox" unique_id=687767523]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+theme_override_styles/panel = SubResource("StyleBoxFlat_1baen")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/mainCard/HBox/LeftPanel" unique_id=1799750544]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 61.0
+offset_right = 386.0
+offset_bottom = 360.0
+texture = ExtResource("2_xklxs")
+expand_mode = 1
+
+[node name="RightPanel" type="VBoxContainer" parent="CenterContainer/mainCard/HBox" unique_id=1530411659]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="Control" type="Control" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=1268618494]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="UserIcon" type="TextureRect" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=688026311]
+layout_mode = 2
+
+[node name="LoginTitle" type="Label" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=539575325]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.06666667, 0.12156863, 0.06666667, 1)
+theme_override_fonts/font = ExtResource("3_1baen")
+theme_override_font_sizes/font_size = 26
+text = "Login"
+horizontal_alignment = 1
+
+[node name="LoginSubtitle" type="Label" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=1033147685]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("3_1baen")
+theme_override_font_sizes/font_size = 13
+text = "Enter your credentials to continue"
+horizontal_alignment = 1
+
+[node name="Username" type="LineEdit" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=1888546573]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_placeholder_color = Color(0.6174542, 0.6174552, 0.61745435, 0.6)
+theme_override_fonts/font = ExtResource("3_1baen")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhoxy")
+placeholder_text = "Username"
+alignment = 1
+
+[node name="Password" type="LineEdit" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=1056195440]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+theme_override_colors/font_placeholder_color = Color(0.6156863, 0.6156863, 0.6156863, 0.6)
+theme_override_fonts/font = ExtResource("3_1baen")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7p2kr")
+placeholder_text = "Password"
+alignment = 1
+
+[node name="Login" type="Button" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=1573542519]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_1baen")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6huy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g1u07")
+text = "Login"
+
+[node name="CheckBox" type="CheckBox" parent="CenterContainer/mainCard/HBox/RightPanel" unique_id=284024899]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+theme_override_fonts/font = ExtResource("3_1baen")
+text = "Keep session?"
+
+[node name="Label" type="Label" parent="." unique_id=1183669]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 626.0
+offset_right = 700.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1baen")
+text = "© 2026 Algodonales Fresh POS"
