@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://bqxuu44m2djlu"]
+[gd_scene format=3 uid="uid://bht1flhedstqd"]
 
-[ext_resource type="Script" uid="uid://cyg2g5w3sujkv" path="res://Scripts/Button/category_button.gd" id="1_la7tw"]
+[ext_resource type="Script" uid="uid://52b6fxfjnu2s" path="res://Scripts/Button/product_button.gd" id="1_yybl5"]
+[ext_resource type="Texture2D" uid="uid://d7r0extucdj2" path="res://Assets/productImages/agua.jpg" id="2_exogh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_la7tw"]
 bg_color = Color(1, 1, 1, 1)
@@ -16,7 +17,7 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_la7tw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nekwc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exogh"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -25,14 +26,17 @@ corner_radius_bottom_left = 10
 
 [node name="PanelContainer" type="PanelContainer" unique_id=121302424]
 offset_right = 129.09755
-offset_bottom = 79.0
+offset_bottom = 120.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_la7tw")
-script = ExtResource("1_la7tw")
+script = ExtResource("1_yybl5")
+button_text = "Agua"
+price_text = "0.65"
+button_icon = ExtResource("2_exogh")
 
 [node name="Button" type="Button" parent="." unique_id=802101066]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_la7tw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nekwc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_exogh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Button" unique_id=114170497]
 layout_mode = 1
@@ -52,6 +56,12 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="Button/VBoxContainer" unique_id=1016145403]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Button/VBoxContainer" unique_id=1163722464]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
