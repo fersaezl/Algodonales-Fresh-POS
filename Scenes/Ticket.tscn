@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://c2y28mv2rdv7a"]
+
+[ext_resource type="Script" uid="uid://depeafxr57b1k" path="res://Scripts/ticket.gd" id="1_vvks3"]
+[ext_resource type="FontFile" uid="uid://cc6otkftwd1po" path="res://Assets/Fonts/COURBD.TTF" id="2_qpexw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pprrh"]
+bg_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 0.078431375)
+shadow_size = 20
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vvks3"]
+
+[node name="Ticket" type="Control" unique_id=825465938]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vvks3")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1178558383]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainCard" type="Panel" parent="CenterContainer" unique_id=1600963417]
+custom_minimum_size = Vector2(420, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pprrh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MainCard" unique_id=950705387]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="LogoLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer" unique_id=424727011]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 16
+text = "ALGODONALES FRESH
+C.I.F.: A57484477"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1721687032]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_vvks3")
+
+[node name="TicketNumber" type="Label" parent="CenterContainer/MainCard/VBoxContainer" unique_id=940522836]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 13
+text = "Ticket No.: 0001"
+
+[node name="DateLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer" unique_id=582457089]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 13
+text = "Date: --/--/----"
+
+[node name="TimeLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer" unique_id=166907192]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 13
+text = "Time: --:--:--"
+
+[node name="CashierLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer" unique_id=435371834]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 13
+text = "Cashier: --"
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=449258251]
+layout_mode = 2
+
+[node name="ColumnHeaders" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=2053580299]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ColProduct" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=187643081]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 12
+text = "Product"
+
+[node name="ColQty" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=1235159777]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 12
+text = "Qty"
+
+[node name="ColUnit" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=663571489]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 12
+text = "Unit"
+
+[node name="ColSub" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=1535956824]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 12
+text = "Subtotal"
+
+[node name="HSeparator3" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1204230289]
+layout_mode = 2
+
+[node name="ItemsList" type="VBoxContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=261754816]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HSeparator4" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=84650]
+layout_mode = 2
+
+[node name="TotalRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=768811183]
+layout_mode = 2
+
+[node name="TotalLbl" type="Label" parent="CenterContainer/MainCard/VBoxContainer/TotalRow" unique_id=961396926]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+text = "TOTAL"
+
+[node name="TotalAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/TotalRow" unique_id=156078617]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+text = "0.00€"
+
+[node name="HSeparator5" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1796431354]
+layout_mode = 2
+
+[node name="ThanksLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1995950041]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 12
+text = "Thanks for your visit!"
+horizontal_alignment = 1

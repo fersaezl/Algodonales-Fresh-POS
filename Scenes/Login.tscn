@@ -97,29 +97,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_767d8")
 
-[node name="DateTimeBar" type="HBoxContainer" parent="." unique_id=1534984857]
-layout_mode = 0
-offset_left = 933.0
-offset_top = 576.0
-offset_right = 1047.0
-offset_bottom = 604.0
-
-[node name="DatePanel" type="Panel" parent="DateTimeBar" unique_id=1676462904]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="DateTimeBar/DatePanel" unique_id=554365139]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="TimePanel" type="Panel" parent="DateTimeBar" unique_id=687104322]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="DateTimeBar/TimePanel" unique_id=1714533313]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1312970155]
 layout_mode = 1
 anchors_preset = 15
