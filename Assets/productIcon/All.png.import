@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpbggfl4u8jvm"
-path="res://.godot/imported/botella-de-leche.png-d32bf2675d338d99242c36f120073ac4.ctex"
+uid="uid://c2jg3xgk2vnr1"
+path="res://.godot/imported/All.png-e99b6e08206f19ae29b09a71b8b83acf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/productIcon/botella-de-leche.png"
-dest_files=["res://.godot/imported/botella-de-leche.png-d32bf2675d338d99242c36f120073ac4.ctex"]
+source_file="res://Assets/productIcon/All.png"
+dest_files=["res://.godot/imported/All.png-e99b6e08206f19ae29b09a71b8b83acf.ctex"]
 
 [params]
 

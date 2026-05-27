@@ -24,10 +24,12 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="PanelContainer" type="PanelContainer" unique_id=121302424]
-offset_right = 129.09755
-offset_bottom = 79.0
+custom_minimum_size = Vector2(90, 70)
+offset_right = 90.0
+offset_bottom = 70.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_la7tw")
 script = ExtResource("1_la7tw")
+icon_size = Vector2(35, 35)
 
 [node name="Button" type="Button" parent="." unique_id=802101066]
 layout_mode = 2
@@ -45,6 +47,7 @@ theme_override_constants/separation = 7
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Button/VBoxContainer" unique_id=1957798318]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -53,6 +56,6 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="Button/VBoxContainer" unique_id=1016145403]
 layout_mode = 2
-size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1

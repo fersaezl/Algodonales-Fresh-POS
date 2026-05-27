@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djmh35r24k1n"
-path="res://.godot/imported/pescado.png-46cf0de9c38fd02b40487b4162b58849.ctex"
+uid="uid://dpbggfl4u8jvm"
+path="res://.godot/imported/Dairy.png-15dc5d104e1616d25666b63a696045a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/productIcon/pescado.png"
-dest_files=["res://.godot/imported/pescado.png-46cf0de9c38fd02b40487b4162b58849.ctex"]
+source_file="res://Assets/productIcon/Dairy.png"
+dest_files=["res://.godot/imported/Dairy.png-15dc5d104e1616d25666b63a696045a7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmic40fhaskko"
-path="res://.godot/imported/garbanzos.png-1ee693109c3a2a0fa8aa5b92696f5679.ctex"
+uid="uid://b1s50wxmfatp"
+path="res://.godot/imported/Beverages.png-3ccfdfb05c928e31ce3bc180408d2999.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/productIcon/garbanzos.png"
-dest_files=["res://.godot/imported/garbanzos.png-1ee693109c3a2a0fa8aa5b92696f5679.ctex"]
+source_file="res://Assets/productIcon/Beverages.png"
+dest_files=["res://.godot/imported/Beverages.png-3ccfdfb05c928e31ce3bc180408d2999.ctex"]
 
 [params]
 

@@ -1,5 +1,24 @@
 [gd_scene format=3 uid="uid://bc40ynsrrixmc"]
 
+[ext_resource type="PackedScene" uid="uid://bqxuu44m2djlu" path="res://Scenes/Button/CategoryButton.tscn" id="1_68xj4"]
+[ext_resource type="Texture2D" uid="uid://dpbggfl4u8jvm" path="res://Assets/productIcon/Dairy.png" id="2_62unc"]
+[ext_resource type="Texture2D" uid="uid://c2jg3xgk2vnr1" path="res://Assets/productIcon/All.png" id="2_j8myx"]
+[ext_resource type="Texture2D" uid="uid://b1s50wxmfatp" path="res://Assets/productIcon/Beverages.png" id="2_p6x7q"]
+[ext_resource type="Texture2D" uid="uid://cdg75m2ihtlj1" path="res://Assets/productIcon/Fruits.png" id="3_ni1tk"]
+[ext_resource type="Texture2D" uid="uid://b1kt7vpj8joph" path="res://Assets/productIcon/Vegetables.png" id="4_j8myx"]
+[ext_resource type="Texture2D" uid="uid://c71saq4l8bjem" path="res://Assets/productIcon/Meat.png" id="5_n6lp0"]
+[ext_resource type="Texture2D" uid="uid://djmh35r24k1n" path="res://Assets/productIcon/Fish.png" id="6_3qaj7"]
+[ext_resource type="Texture2D" uid="uid://cmic40fhaskko" path="res://Assets/productIcon/Pantry.png" id="7_gh4ev"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68xj4"]
+bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw1kh"]
+bg_color = Color(0.3196456, 0.69882643, 0.2976064, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
+bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
+
 [node name="MainPos" type="Control" unique_id=1141181362]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +26,161 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1245416890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.92941177, 0.9529412, 0.92941177, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=867928888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="MainLayout" type="VBoxContainer" parent="MarginContainer" unique_id=1331561640]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1555328487]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_68xj4")
+
+[node name="Content" type="HBoxContainer" parent="MarginContainer/MainLayout" unique_id=1609184870]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="ProductsPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=681048521]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel" unique_id=1466560855]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer" unique_id=1660458750]
+layout_mode = 2
+
+[node name="ProductsLabel" type="Label" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=651650069]
+layout_mode = 2
+text = "Products"
+
+[node name="SearchBar" type="LineEdit" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1848917538]
+layout_mode = 2
+text = "Search"
+
+[node name="ProductsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=623732389]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProductsGrid" type="GridContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll" unique_id=125984713]
+z_index = 10
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 4
+
+[node name="All" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=121302424 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+button_text = "All"
+button_icon = ExtResource("2_j8myx")
+
+[node name="Dairy" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=549585112 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+size_flags_horizontal = 3
+button_text = "Dairy"
+button_icon = ExtResource("2_62unc")
+
+[node name="Fruits" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=244428923 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+size_flags_horizontal = 3
+button_text = "Fruits"
+button_icon = ExtResource("3_ni1tk")
+
+[node name="Vegetables" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=69624900 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+size_flags_horizontal = 3
+button_text = "Vegetables"
+button_icon = ExtResource("4_j8myx")
+
+[node name="Meat" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=1413194047 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+size_flags_horizontal = 3
+button_text = "Meat"
+button_icon = ExtResource("5_n6lp0")
+
+[node name="Fish" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=1000589736 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+size_flags_horizontal = 3
+button_text = "Fish"
+button_icon = ExtResource("6_3qaj7")
+
+[node name="Pantry" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=1036824745 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+size_flags_horizontal = 3
+button_text = "Pantry"
+button_icon = ExtResource("7_gh4ev")
+
+[node name="Beverages" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid" unique_id=1002698779 instance=ExtResource("1_68xj4")]
+layout_mode = 2
+size_flags_horizontal = 3
+button_text = "Beverages"
+button_icon = ExtResource("2_p6x7q")
+
+[node name="CartPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=1442308960]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/Content/CartPanel" unique_id=1664966700]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/Content/CartPanel/MarginContainer" unique_id=234182568]
+layout_mode = 2
+
+[node name="CartLabel" type="Label" parent="MarginContainer/MainLayout/Content/CartPanel/MarginContainer/VBoxContainer" unique_id=1735752821]
+layout_mode = 2
+text = "Cart"
+
+[node name="CartItems" type="VBoxContainer" parent="MarginContainer/MainLayout/Content/CartPanel/MarginContainer/VBoxContainer" unique_id=646612850]
+layout_mode = 2
+
+[node name="PaymentPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=1274945131]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/Content/PaymentPanel" unique_id=1372395618]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer" unique_id=155812337]
+layout_mode = 2
+
+[node name="PaymentLabel" type="Label" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1440480209]
+layout_mode = 2
+text = "TOTAL"
+
+[node name="Cash" type="Button" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=302579832]
+layout_mode = 2
+text = "CASH"
+
+[node name="Card" type="Button" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1948502312]
+layout_mode = 2
+text = "CARD"
+
+[node name="Pay" type="Button" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=956753712]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_iw1kh")
+text = "PAY NOW"
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")

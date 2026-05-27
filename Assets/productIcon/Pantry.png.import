@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdg75m2ihtlj1"
-path="res://.godot/imported/manzana.png-e5c1fb06f54d811c675f868672bbff75.ctex"
+uid="uid://cmic40fhaskko"
+path="res://.godot/imported/Pantry.png-306d02ee8ac648b74df40cf11b081cce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/productIcon/manzana.png"
-dest_files=["res://.godot/imported/manzana.png-e5c1fb06f54d811c675f868672bbff75.ctex"]
+source_file="res://Assets/productIcon/Pantry.png"
+dest_files=["res://.godot/imported/Pantry.png-306d02ee8ac648b74df40cf11b081cce.ctex"]
 
 [params]
 

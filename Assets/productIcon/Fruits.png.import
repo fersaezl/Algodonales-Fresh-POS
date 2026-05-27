@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1kt7vpj8joph"
-path="res://.godot/imported/repollo.png-3daaeff1a375db052dffe95f02c6bef6.ctex"
+uid="uid://cdg75m2ihtlj1"
+path="res://.godot/imported/Fruits.png-7195a3230db5e44ed405f4a25233caa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/productIcon/repollo.png"
-dest_files=["res://.godot/imported/repollo.png-3daaeff1a375db052dffe95f02c6bef6.ctex"]
+source_file="res://Assets/productIcon/Fruits.png"
+dest_files=["res://.godot/imported/Fruits.png-7195a3230db5e44ed405f4a25233caa4.ctex"]
 
 [params]
 
