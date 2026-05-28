@@ -109,6 +109,11 @@ text = "Cart"
 [node name="CartItems" type="VBoxContainer" parent="MarginContainer/MainLayout/Content/CartPanel/MarginContainer/VBoxContainer" unique_id=646612850]
 layout_mode = 2
 
+[node name="total" type="Label" parent="MarginContainer/MainLayout/Content/CartPanel/MarginContainer/VBoxContainer" unique_id=993739998]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 2
+
 [node name="PaymentPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=1274945131]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
@@ -140,3 +145,5 @@ text = "PAY NOW"
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
+
+[connection signal="text_changed" from="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]

@@ -3,7 +3,8 @@ extends Node
 var products=[]
 var productsFiltered=[]
 var sections=[]
-
+var cart={}
+var prod
 func _ready():
 	products=readProducts()
 	sections=readSections()
@@ -35,3 +36,7 @@ func searchProducts(string):
 			productsFiltered.push_back(pro)
 	if(productsFiltered.size()==0):
 		print("No hay productos con eses filtro")
+func searchProductByid(id):
+	for pro in products:
+		if(pro.id==id):
+			return pro
