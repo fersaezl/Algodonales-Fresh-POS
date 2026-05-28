@@ -4,26 +4,31 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_la7tw"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
 border_color = Color(0.7179642, 0.7179641, 0.71796423, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_la7tw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nekwc"]
 bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.17954841, 0.82377666, 3.85046e-06, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
-[node name="PanelContainer" type="PanelContainer" unique_id=121302424]
+[node name="PanelContainer2" type="PanelContainer" unique_id=121302424]
 custom_minimum_size = Vector2(90, 70)
 offset_right = 90.0
 offset_bottom = 70.0
