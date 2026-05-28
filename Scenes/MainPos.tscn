@@ -80,7 +80,6 @@ size_flags_vertical = 3
 z_index = 10
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 columns = 4
 
 [node name="ProductsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1376810535]

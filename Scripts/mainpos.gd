@@ -8,9 +8,12 @@ const IMAGES = "res://Assets/productImages/"
 @onready var categories_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll/SectionsGrid
 @onready var products_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid
 
+
+
 func _ready() -> void:
 	load_categories()
-	load_products("all")
+	var first_btn = categories_grid.get_child(0)
+	load_products("all", first_btn)
 
 func load_categories() -> void:
 	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
@@ -24,10 +27,20 @@ func load_categories() -> void:
 		var btn = CAT_BTN.instantiate()
 		btn.button_text = section["name"]
 		btn.button_icon = load(ICONS + section["image"])
+		btn.section_id = section["id"]
 		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		btn.category_pressed.connect(load_products)
 		categories_grid.add_child(btn)
 
-func load_products(section_id: String) -> void:
+var current_btn = null
+
+func load_products(section_id: String, btn = null) -> void:
+	if current_btn:
+		current_btn.set_selected(false)
+	current_btn = btn
+	if btn: 
+		btn.set_selected(true)
+	
 	for child in products_grid.get_children():
 		child.queue_free()
 
