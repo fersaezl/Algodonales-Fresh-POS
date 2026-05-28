@@ -1,9 +1,0 @@
-[
-	{"sectionName": "Fruit", "image": "fruit.png"},
-	{"sectionName": "Vegetables", "image": "verduras.jpg"},
-	{"sectionName": "Meat", "image": "carne.jpg"},
-	{"sectionName": "Fishmonger", "image": "pescado.jpg"},
-	{"sectionName": "Dairy", "image": "lacteos.jpg"},
-	{"sectionName": "Pantry", "image": "despensa.jpg"},
-	{"sectionName": "Drinks", "image": "agua.png"}
-]
