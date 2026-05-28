@@ -72,14 +72,25 @@ text = "Products"
 layout_mode = 2
 text = "Search"
 
-[node name="ProductsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=623732389]
+[node name="SectionsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=623732389]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ProductsGrid" type="GridContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll" unique_id=125984713]
+[node name="SectionsGrid" type="GridContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll" unique_id=125984713]
 z_index = 10
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="ProductsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1376810535]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProductsGrid" type="GridContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll" unique_id=1078940490]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 columns = 4
 
 [node name="CartPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=1442308960]

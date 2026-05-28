@@ -25,8 +25,9 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="PanelContainer" type="PanelContainer" unique_id=121302424]
-offset_right = 129.09755
-offset_bottom = 120.0
+custom_minimum_size = Vector2(110, 100)
+offset_right = 110.0
+offset_bottom = 100.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_la7tw")
 script = ExtResource("1_yybl5")
 button_text = "Agua"
@@ -39,6 +40,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_la7tw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exogh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Button" unique_id=114170497]
+custom_minimum_size = Vector2(110, 100)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,10 +61,13 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="Button/VBoxContainer" unique_id=1163722464]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1

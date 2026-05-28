@@ -7,18 +7,15 @@ var sections=[]
 func _ready():
 	products=readProducts()
 	sections=readSections()
-	searchProducts("ESTREllA GALICIA")
-	print(productsFiltered)
-	#productsSection("Vegetables")
 
 func readProducts():
-	var file = FileAccess.open("res://Assets/json/products.json", FileAccess.READ)
+	var file = FileAccess.open("res://Data/products.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var parseContent=JSON.parse_string(content)
 	return parseContent
 	
 func readSections():
-	var file = FileAccess.open("res://Assets/json/sections.json", FileAccess.READ)
+	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var parseContent=JSON.parse_string(content)
 	return parseContent
