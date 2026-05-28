@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmekxf8r4qntq"
-path="res://.godot/imported/despensa.jpg-929860e9bb34d1477d33bfdfbc02b9ef.ctex"
+uid="uid://c8rm382q62xg1"
+path="res://.godot/imported/tarjeta-de-credito.png-65623d173397adf9bd01c9da1e66408e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/productImages/despensa.jpg"
-dest_files=["res://.godot/imported/despensa.jpg-929860e9bb34d1477d33bfdfbc02b9ef.ctex"]
+source_file="res://Assets/Icons/tarjeta-de-credito.png"
+dest_files=["res://.godot/imported/tarjeta-de-credito.png-65623d173397adf9bd01c9da1e66408e.ctex"]
 
 [params]
 
