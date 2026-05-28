@@ -13,7 +13,7 @@ func _ready():
 	_load_users()
 
 func _load_users():
-	var file = FileAccess.open("res://Assets/json/users.json", FileAccess.READ)
+	var file = FileAccess.open("res://Data/users.json", FileAccess.READ)
 	if file:
 		var json = JSON.new()
 		json.parse(file.get_as_text())

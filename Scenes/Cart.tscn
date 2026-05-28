@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://bxr4whmijjkgs"]
+
+[ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="1_puk5m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4nsc"]
+bg_color = Color(0.9490196, 0.9607843, 0.9490196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puk5m"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_right = 1
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_575ec"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 1
+border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3otky"]
+bg_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5iil"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.81960785, 0.8980392, 0.81960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j80qm"]
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_bottom = 1
+border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2bjf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6oiy"]
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_top = 1
+border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2bjf"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Cart" type="Control" unique_id=453017138]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="." unique_id=1818004259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_x4nsc")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1095991892]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainCard" type="Panel" parent="CenterContainer" unique_id=1438550758]
+custom_minimum_size = Vector2(700, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_puk5m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MainCard" unique_id=205328517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 13.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="HeaderPanel" type="Panel" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1513524115]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_575ec")
+
+[node name="HeaderRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel" unique_id=743607880]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CartTitle" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow" unique_id=981541329]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
+theme_override_font_sizes/font_size = 18
+text = "Shopping Cart"
+
+[node name="CountBadge" type="Panel" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow" unique_id=853710464]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3otky")
+
+[node name="Label" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow/CountBadge" unique_id=2033980703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClearBtn" type="Button" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow" unique_id=652446622]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5iil")
+text = "Empty cart"
+
+[node name="ColHeaderPanel" type="Panel" parent="CenterContainer/MainCard/VBoxContainer" unique_id=207773439]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j80qm")
+
+[node name="ColHeaderRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel" unique_id=2007949799]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColImg" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1821768314]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+
+[node name="ColProduct" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1359211041]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_font_sizes/font_size = 12
+text = "Product"
+
+[node name="ColPrice" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=458621696]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_font_sizes/font_size = 12
+text = "Price"
+
+[node name="ColQty" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1470818127]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_font_sizes/font_size = 12
+text = "Qty"
+
+[node name="ColTotal" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1870774184]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_font_sizes/font_size = 12
+text = "Total"
+
+[node name="ScrollArea" type="ScrollContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1823401369]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a2bjf")
+
+[node name="ItemsList" type="VBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/ScrollArea" unique_id=902235629]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="FooterPanel" type="Panel" parent="CenterContainer/MainCard/VBoxContainer" unique_id=250733271]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6oiy")
+
+[node name="FooterRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel" unique_id=1045438851]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftTotals" type="VBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow" unique_id=1569530183]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Subtotal" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals" unique_id=1240459531]
+layout_mode = 2
+
+[node name="SubtotalLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Subtotal" unique_id=570005264]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_font_sizes/font_size = 13
+text = "Subtotal"
+
+[node name="SubtotalAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Subtotal" unique_id=1295285230]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_font_sizes/font_size = 13
+text = "0,00 €"
+
+[node name="Discount" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals" unique_id=1678506990]
+layout_mode = 2
+
+[node name="DiscountLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Discount" unique_id=209751711]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_font_sizes/font_size = 13
+text = "Discount"
+
+[node name="DiscountAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Discount" unique_id=1209377428]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_font_sizes/font_size = 13
+text = "0,00 €"
+
+[node name="EditDiscountBtn" type="Button" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Discount" unique_id=2141765554]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2bjf")
+text = "Edit"
+
+[node name="Taxes" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals" unique_id=968544406]
+layout_mode = 2
+
+[node name="TaxLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Taxes" unique_id=1004624163]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_font_sizes/font_size = 13
+text = "Taxes (21%)"
+
+[node name="TaxAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Taxes" unique_id=1101848608]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_font_sizes/font_size = 13
+text = "0,00 €"
+
+[node name="VSeparator" type="VSeparator" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow" unique_id=1968135002]
+layout_mode = 2
+
+[node name="RightTotal" type="VBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow" unique_id=1362865926]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="TotalLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal" unique_id=1128924259]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_font_sizes/font_size = 14
+text = "TOTAL"
+horizontal_alignment = 2
+
+[node name="TotalAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal" unique_id=579748362]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
+theme_override_font_sizes/font_size = 28
+text = "0,00 €"
+horizontal_alignment = 2
