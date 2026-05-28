@@ -46,7 +46,7 @@ grow_vertical = 2
 theme_override_constants/separation = 7
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Button/VBoxContainer" unique_id=1957798318]
+[node name="CategoryImage" type="TextureRect" parent="Button/VBoxContainer" unique_id=1957798318]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -54,7 +54,7 @@ size_flags_vertical = 4
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Button/VBoxContainer" unique_id=1016145403]
+[node name="CategoryLabel" type="Label" parent="Button/VBoxContainer" unique_id=1016145403]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12

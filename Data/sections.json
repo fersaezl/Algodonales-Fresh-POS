@@ -1,4 +1,9 @@
 [
+	{
+	"id": "all",
+	"name": "All",
+	"image": "All.png"
+  },
   {
 	"id": "fruit",
 	"name": "Fruit",
