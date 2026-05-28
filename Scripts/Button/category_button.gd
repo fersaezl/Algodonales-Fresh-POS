@@ -1,7 +1,7 @@
 extends PanelContainer
 
-@onready var label = $Button/VBoxContainer/Label
-@onready var icon = $Button/VBoxContainer/TextureRect
+@onready var label = $Button/VBoxContainer/CategoryLabel
+@onready var icon = $Button/VBoxContainer/CategoryImage
 
 @export var button_text: String
 @export var button_icon: Texture2D
