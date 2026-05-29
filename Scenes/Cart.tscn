@@ -36,6 +36,8 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+expand_margin_left = 10.0
+expand_margin_right = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j80qm"]
 bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
@@ -89,19 +91,18 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_575ec")
 
-[node name="HeaderRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel" unique_id=743607880]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -4.0
-offset_right = -5.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel" unique_id=1650116244]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 12
 
-[node name="CartTitle" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow" unique_id=981541329]
+[node name="HeaderRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer" unique_id=743607880]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="CartTitle" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow" unique_id=981541329]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
@@ -109,16 +110,22 @@ theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 18
 text = "Shopping Cart"
 
-[node name="CountBadge" type="Panel" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow" unique_id=853710464]
+[node name="CountBadge" type="Panel" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow" unique_id=853710464]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_3otky")
 
-[node name="Label" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow/CountBadge" unique_id=2033980703]
+[node name="Label" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow/CountBadge" unique_id=2033980703]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_puk5m")
@@ -127,14 +134,19 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ClearBtn" type="Button" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow" unique_id=652446622]
-custom_minimum_size = Vector2(0, 36)
+[node name="Control" type="Control" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow" unique_id=507523621]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ClearBtn" type="Button" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow" unique_id=652446622]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxFlat_i5iil")
-text = "Empty cart"
+text = "Empty
+ cart"
 
 [node name="ColHeaderPanel" type="Panel" parent="CenterContainer/MainCard/VBoxContainer" unique_id=207773439]
 custom_minimum_size = Vector2(0, 40)
