@@ -7,7 +7,7 @@ const IMAGES = "res://Assets/productImages/"
 
 @onready var categories_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll/SectionsGrid
 @onready var products_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid
-@onready var cartItems =  $MarginContainer/MainLayout/Content/CartPanel/MarginContainer/VBoxContainer/CartItems
+@onready var cartTSCN =  $MarginContainer/MainLayout/Content/CartPanel/Cart
 
 var total=0.0
 var pro
@@ -66,26 +66,17 @@ func show_products(product_list: Array) -> void:
 		btn.productPressed.connect(addCart)
 		products_grid.add_child(btn)
 		
-func addCart(product,quantity):
-	total=0.0
-	for child in cartItems.get_children():
-		child.queue_free()
-	var cart=ProductManager.cart
-	var id=product.id
-	if(cart.has(id)):
-		cart[id]+=1
+func addCart(product, quantity):
+	var cart = ProductManager.cart
+	var id = product.id
+	
+	if cart.has(id):
+		cart[id] += 1
 	else:
 		cart[id] = 1
-	for prod in cart:
-		var label=Label.new()
-		pro=ProductManager.searchProductByid(prod)
-		label.text=pro.productName+" "+str(cart[prod])+"x"+str(pro.price)
-		total += float(cart[prod]) * float(pro.price)
-		cartItems.add_child(label)
-		%total.text=str(total)
 		
-
-
+	Cart2.productsAdded+=1
+	cartTSCN.add_product(product, cart)
 func _on_search_bar_text_changed(new_text: String) -> void:
 	if (new_text==""):
 		load_products("all", first_btn)
