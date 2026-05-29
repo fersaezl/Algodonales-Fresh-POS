@@ -1,19 +1,19 @@
 [
   {
 	"id": 1,
-	"productName": "Golden Apple (1kg)",
+	"productName": "Golden Apple",
 	"price": 2.45,
 	"stock": 50,
 	"section": "fruit",
-	"image": "manzana.jpg"
+	"image": "apple.jpg"
   },
   {
 	"id": 2,
-	"productName": "Canary Islands Banana",
+	"productName": "Banana",
 	"price": 1.99,
 	"stock": 49,
 	"section": "fruit",
-	"image": "platano.jpg"
+	"image": "banana.jpg"
   },
   {
 	"id": 3,
@@ -21,23 +21,23 @@
 	"price": 3.2,
 	"stock": 18,
 	"section": "vegetables",
-	"image": "tomate.jpg"
+	"image": "tomato.jpg"
   },
   {
 	"id": 4,
-	"productName": "Iceberg Lettuce",
+	"productName": "Lettuce",
 	"price": 1.1,
 	"stock": 100,
 	"section": "vegetables",
-	"image": "lechuga.jpg"
+	"image": "lettuce.jpg"
   },
   {
 	"id": 5,
-	"productName": "Table Orange (1kg)",
+	"productName": "Orange",
 	"price": 2.0,
 	"stock": 68,
 	"section": "fruit",
-	"image": "naranja.jpg"
+	"image": "orange.jpg"
   },
   {
 	"id": 6,
@@ -45,7 +45,7 @@
 	"price": 2.45,
 	"stock": 100,
 	"section": "fruit",
-	"image": "mandarina.jpg"
+	"image": "mandarin.jpg"
   },
   {
 	"id": 7,
@@ -53,7 +53,7 @@
 	"price": 2.8,
 	"stock": 15,
 	"section": "fruit",
-	"image": "pera.jpg"
+	"image": "pear.jpg"
   },
   {
 	"id": 8,
@@ -69,7 +69,7 @@
 	"price": 1.75,
 	"stock": 30,
 	"section": "vegetables",
-	"image": "calabacin.jpg"
+	"image": "courgette.jpg"
   },
   {
 	"id": 10,
@@ -77,7 +77,7 @@
 	"price": 1.9,
 	"stock": 32,
 	"section": "vegetables",
-	"image": "berenjena.jpg"
+	"image": "aubergine.jpg"
   },
   {
 	"id": 11,
@@ -85,7 +85,7 @@
 	"price": 2.2,
 	"stock": 40,
 	"section": "vegetables",
-	"image": "pimiento.jpg"
+	"image": "pepper.jpg"
   },
   {
 	"id": 12,
@@ -93,7 +93,7 @@
 	"price": 1.3,
 	"stock": 90,
 	"section": "vegetables",
-	"image": "cebolla.jpg"
+	"image": "onion.jpg"
   },
   {
 	"id": 13,
@@ -101,7 +101,7 @@
 	"price": 6.5,
 	"stock": 45,
 	"section": "meat",
-	"image": "pollo.jpg"
+	"image": "chicken.jpg"
   },
   {
 	"id": 14,
@@ -109,15 +109,15 @@
 	"price": 12.9,
 	"stock": 50,
 	"section": "meat",
-	"image": "entrecot.jpg"
+	"image": "beef_entrecote.jpg"
   },
   {
 	"id": 15,
-	"productName": "Mixed Minced Meat",
+	"productName": "Minced Meat",
 	"price": 5.6,
 	"stock": 45,
 	"section": "meat",
-	"image": "carnepicada.jpg"
+	"image": "minced_meat.jpg"
   },
   {
 	"id": 16,
@@ -125,7 +125,7 @@
 	"price": 6.9,
 	"stock": 18,
 	"section": "meat",
-	"image": "chuletas.jpg"
+	"image": "pork_chops.jpg"
   },
   {
 	"id": 17,
@@ -133,7 +133,7 @@
 	"price": 4.95,
 	"stock": 22,
 	"section": "meat",
-	"image": "hamburguesa.jpg"
+	"image": "burger.jpg"
   },
   {
 	"id": 18,
@@ -141,11 +141,11 @@
 	"price": 8.4,
 	"stock": 23,
 	"section": "fish",
-	"image": "lubina.jpg"
+	"image": "fresh_sea_bass.jpg"
   },
   {
 	"id": 19,
-	"productName": "Norwegian Salmon",
+	"productName": "Salmon",
 	"price": 14.2,
 	"stock": 30,
 	"section": "fish",
@@ -157,7 +157,7 @@
 	"price": 9.1,
 	"stock": 7,
 	"section": "fish",
-	"image": "merluza.jpg"
+	"image": "hake.jpg"
   },
   {
 	"id": 21,
@@ -165,7 +165,7 @@
 	"price": 11.5,
 	"stock": 12,
 	"section": "fish",
-	"image": "gambas.jpg"
+	"image": "raw_prawns.jpg"
   },
   {
 	"id": 22,
@@ -173,7 +173,7 @@
 	"price": 1.05,
 	"stock": 200,
 	"section": "dairy",
-	"image": "leche_entera.jpg"
+	"image": "whole_milk.jpg"
   },
   {
 	"id": 23,
@@ -181,23 +181,23 @@
 	"price": 1.05,
 	"stock": 180,
 	"section": "dairy",
-	"image": "leche_desnatada.jpg"
+	"image": "skimmed_milk.jpg"
   },
   {
 	"id": 24,
-	"productName": "Greek Yogurt Pack 4",
+	"productName": "Greek Yogurt (x4)",
 	"price": 2.3,
 	"stock": 44,
 	"section": "dairy",
-	"image": "yogur.jpg"
+	"image": "yogurt.jpg"
   },
   {
 	"id": 25,
-	"productName": "Payoyo Cheese (Wedge)",
+	"productName": "Payoyo Cheese",
 	"price": 9.5,
 	"stock": 25,
 	"section": "dairy",
-	"image": "queso_payoyo.jpg"
+	"image": "payoyo_cheese.jpg"
   },
   {
 	"id": 26,
@@ -205,15 +205,15 @@
 	"price": 2.15,
 	"stock": 55,
 	"section": "dairy",
-	"image": "mantequilla.jpg"
+	"image": "butter.jpg"
   },
   {
 	"id": 27,
-	"productName": "Vanilla Custard Pack",
+	"productName": "Vanilla Custard",
 	"price": 1.95,
 	"stock": 75,
 	"section": "dairy",
-	"image": "natillas.jpg"
+	"image": "vanilla_custard.jpg"
   },
   {
 	"id": 28,
@@ -221,7 +221,7 @@
 	"price": 0.85,
 	"stock": 150,
 	"section": "pantry",
-	"image": "macarrones.jpg"
+	"image": "macaroni.jpg"
   },
   {
 	"id": 29,
@@ -229,7 +229,7 @@
 	"price": 0.9,
 	"stock": 128,
 	"section": "pantry",
-	"image": "espaguetis.jpg"
+	"image": "spaghetti.jpg"
   },
   {
 	"id": 30,
@@ -245,7 +245,7 @@
 	"price": 1.95,
 	"stock": 100,
 	"section": "pantry",
-	"image": "arroz_bomba.jpg"
+	"image": "bomba_rice.jpg"
   },
   {
 	"id": 32,
@@ -253,23 +253,23 @@
 	"price": 2.2,
 	"stock": 80,
 	"section": "pantry",
-	"image": "arroz_integral.jpg"
+	"image": "brown_rice.jpg"
   },
   {
 	"id": 33,
-	"productName": "Extra Virgin Olive Oil 5L",
+	"productName": "Olive Oil",
 	"price": 45.0,
 	"stock": 40,
 	"section": "pantry",
-	"image": "aceite.jpg"
+	"image": "oil.jpg"
   },
   {
 	"id": 34,
-	"productName": "Cooked Chickpeas Jar",
+	"productName": "Cooked Chickpeas",
 	"price": 0.7,
 	"stock": 90,
 	"section": "pantry",
-	"image": "garbanzos.jpg"
+	"image": "cooked_chickpeas.jpg"
   },
   {
 	"id": 35,
@@ -277,15 +277,15 @@
 	"price": 0.75,
 	"stock": 85,
 	"section": "pantry",
-	"image": "lentejas.jpg"
+	"image": "cooked_lentils.jpg"
   },
   {
 	"id": 36,
-	"productName": "Tomato Sauce 400g",
+	"productName": "Tomato Sauce",
 	"price": 1.2,
 	"stock": 4,
 	"section": "pantry",
-	"image": "tomate_frito.jpg"
+	"image": "tomato_sauce.jpg"
   },
   {
 	"id": 37,
@@ -293,15 +293,15 @@
 	"price": 3.6,
 	"stock": 60,
 	"section": "pantry",
-	"image": "atun.jpg"
+	"image": "tuna.jpg"
   },
   {
 	"id": 38,
-	"productName": "Mineral Water Pack 6x1.5L",
+	"productName": "Mineral Water",
 	"price": 2.1,
 	"stock": 120,
 	"section": "beverages",
-	"image": "agua.jpg"
+	"image": "water.jpg"
   },
   {
 	"id": 39,
@@ -309,7 +309,7 @@
 	"price": 7.5,
 	"stock": 45,
 	"section": "beverages",
-	"image": "vino.jpg"
+	"image": "wine.jpg"
   },
   {
 	"id": 40,
@@ -321,18 +321,18 @@
   },
   {
 	"id": 41,
-	"productName": "Estrella Galicia Beer Pack 6",
+	"productName": "Estrella Galicia",
 	"price": 4.2,
 	"stock": 21,
 	"section": "beverages",
-	"image": "cerveza.jpg"
+	"image": "beer.jpg"
   },
   {
 	"id": 42,
-	"productName": "Orange Juice 1L",
+	"productName": "Orange Juice",
 	"price": 1.75,
 	"stock": 0,
 	"section": "beverages",
-	"image": "zumo.jpg"
+	"image": "juice.jpg"
   }
 ]

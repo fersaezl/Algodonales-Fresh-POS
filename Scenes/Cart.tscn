@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dv7f4vrrk87vl"]
 
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="1_puk5m"]
+[ext_resource type="Texture2D" uid="uid://txhu8kfg2ggb" path="res://Assets/a-pencil-with-a-black-eraser-on-the-end-png.webp" id="2_575ec"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puk5m"]
 bg_color = Color(1, 1, 1, 1)
@@ -10,7 +11,7 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-shadow_size = 20
+shadow_size = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_575ec"]
 bg_color = Color(1, 1, 1, 1)
@@ -49,18 +50,6 @@ border_width_top = 1
 border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2bjf"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
 
 [node name="Cart" type="Control" unique_id=453017138]
 layout_mode = 3
@@ -105,7 +94,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
+offset_top = -4.0
 offset_right = -5.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -129,6 +120,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 12
 text = "0"
 horizontal_alignment = 1
@@ -138,6 +130,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(0, 36)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxFlat_i5iil")
 text = "Empty cart"
@@ -158,12 +151,14 @@ grow_vertical = 2
 [node name="ColImg" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1821768314]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 12
 
 [node name="ColProduct" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1359211041]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 12
 text = "Product"
 
@@ -172,6 +167,7 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 12
 text = "Price"
 
@@ -180,6 +176,7 @@ custom_minimum_size = Vector2(110, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 12
 text = "Qty"
 
@@ -188,6 +185,7 @@ custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 12
 text = "Total"
 
@@ -219,6 +217,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 6
 
+[node name="Control" type="Control" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals" unique_id=2024634435]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
 [node name="Subtotal" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals" unique_id=1240459531]
 layout_mode = 2
 
@@ -226,12 +228,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 text = "Subtotal"
 
 [node name="SubtotalAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Subtotal" unique_id=1295285230]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 text = "0,00 €"
 
@@ -242,21 +246,25 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 text = "Discount"
 
 [node name="DiscountAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Discount" unique_id=1209377428]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 text = "0,00 €"
 
-[node name="EditDiscountBtn" type="Button" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Discount" unique_id=2141765554]
+[node name="EditDiscountBtn" type="TextureButton" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Discount" unique_id=1397752989]
+custom_minimum_size = Vector2(15, 15)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
-theme_override_font_sizes/font_size = 8
-theme_override_styles/normal = SubResource("StyleBoxFlat_a2bjf")
-text = "Edit"
+texture_normal = ExtResource("2_575ec")
+texture_pressed = ExtResource("2_575ec")
+texture_hover = ExtResource("2_575ec")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Taxes" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals" unique_id=968544406]
 layout_mode = 2
@@ -265,12 +273,14 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 text = "Taxes (21%)"
 
 [node name="TaxAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Taxes" unique_id=1101848608]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 text = "0,00 €"
 
@@ -281,9 +291,14 @@ layout_mode = 2
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 
+[node name="Control" type="Control" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal" unique_id=771912015]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
 [node name="TotalLabel" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal" unique_id=1128924259]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 14
 text = "TOTAL"
 horizontal_alignment = 2
@@ -291,6 +306,7 @@ horizontal_alignment = 2
 [node name="TotalAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal" unique_id=579748362]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
+theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 28
 text = "0,00 €"
 horizontal_alignment = 2
