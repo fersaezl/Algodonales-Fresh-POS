@@ -1,5 +1,6 @@
-[gd_scene format=3 uid="uid://bxr4whmijjkgs"]
+[gd_scene format=3 uid="uid://cp72yxj37554s"]
 
+[ext_resource type="Script" uid="uid://b4o2qay5etc2p" path="res://Scenes/cart2.gd" id="1_3otky"]
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="1_puk5m"]
 [ext_resource type="Texture2D" uid="uid://txhu8kfg2ggb" path="res://Assets/a-pencil-with-a-black-eraser-on-the-end-png.webp" id="2_575ec"]
 
@@ -60,6 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3otky")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1095991892]
 layout_mode = 1
@@ -117,7 +119,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_3otky")
 
-[node name="Label" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow/CountBadge" unique_id=2033980703]
+[node name="Label" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow/CountBadge" unique_id=2033980703]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -203,11 +205,14 @@ theme_override_font_sizes/font_size = 12
 text = "Total"
 
 [node name="ScrollArea" type="ScrollContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1823401369]
+z_index = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_a2bjf")
 
 [node name="ItemsList" type="VBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/ScrollArea" unique_id=902235629]
+modulate = Color(0, 0, 0, 1)
+z_index = 5
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
@@ -320,9 +325,12 @@ text = "TOTAL"
 horizontal_alignment = 2
 
 [node name="TotalAmount" type="Label" parent="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal" unique_id=579748362]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
 theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 28
 text = "0,00 €"
 horizontal_alignment = 2
+
+[connection signal="pressed" from="CenterContainer/MainCard/VBoxContainer/HeaderPanel/HeaderRow/ClearBtn" to="." method="_on_clear_btn_pressed"]
