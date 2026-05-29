@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dv7f4vrrk87vl"]
+[gd_scene format=3 uid="uid://bxr4whmijjkgs"]
 
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="1_puk5m"]
 [ext_resource type="Texture2D" uid="uid://txhu8kfg2ggb" path="res://Assets/a-pencil-with-a-black-eraser-on-the-end-png.webp" id="2_575ec"]
@@ -77,8 +77,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 13.0
-offset_right = -1.0
+offset_left = 3.0
+offset_top = 14.0
+offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
@@ -209,6 +210,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 
