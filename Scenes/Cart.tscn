@@ -1,9 +1,6 @@
-[gd_scene format=3 uid="uid://bxr4whmijjkgs"]
+[gd_scene format=3 uid="uid://dv7f4vrrk87vl"]
 
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="1_puk5m"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4nsc"]
-bg_color = Color(0.9490196, 0.9607843, 0.9490196, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puk5m"]
 bg_color = Color(1, 1, 1, 1)
@@ -73,15 +70,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="Panel" parent="." unique_id=1818004259]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_x4nsc")
-
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1095991892]
 layout_mode = 1
 anchors_preset = 15
@@ -91,7 +79,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainCard" type="Panel" parent="CenterContainer" unique_id=1438550758]
-custom_minimum_size = Vector2(700, 600)
+custom_minimum_size = Vector2(406, 530)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_puk5m")
 
