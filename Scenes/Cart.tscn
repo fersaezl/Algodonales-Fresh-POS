@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://bxr4whmijjkgs"]
 
-[ext_resource type="Script" path="res://Scenes/cart2.gd" id="1_3otky"]
+[ext_resource type="Script" uid="uid://b4o2qay5etc2p" path="res://Scenes/cart2.gd" id="1_3otky"]
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="1_puk5m"]
 [ext_resource type="Texture2D" uid="uid://txhu8kfg2ggb" path="res://Assets/a-pencil-with-a-black-eraser-on-the-end-png.webp" id="2_575ec"]
-[ext_resource type="PackedScene" uid="uid://d2b0jvv660hra" path="res://Scenes/colHeader.tscn" id="3_i5iil"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puk5m"]
 bg_color = Color(1, 1, 1, 1)
@@ -13,11 +12,11 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.11764706)
 shadow_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_575ec"]
 bg_color = Color(1, 1, 1, 1)
-border_width_bottom = 1
 border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3otky"]
@@ -40,6 +39,11 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 expand_margin_left = 10.0
 expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j80qm"]
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_top = 1
+border_width_bottom = 1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2bjf"]
 
@@ -115,7 +119,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_3otky")
 
-[node name="Label" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow/CountBadge" unique_id=935100896]
+[node name="Badge" type="Label" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow/CountBadge" unique_id=935100896]
+unique_name_in_owner = true
 layout_mode = 0
 offset_right = 29.0
 offset_bottom = 23.0
@@ -136,8 +141,49 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_i5iil")
 text = "Empty
  cart"
 
-[node name="ColHeaderPanel" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1528531506 instance=ExtResource("3_i5iil")]
+[node name="ColHeaderPanel" type="Panel" parent="CenterContainer/MainCard/VBoxContainer" unique_id=188972695]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j80qm")
+
+[node name="ColHeaderRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel" unique_id=1534078935]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColImg" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=432803199]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="ColProduct" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1111677262]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+text = "Product"
+
+[node name="ColPrice" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=382816936]
+custom_minimum_size = Vector2(98, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+text = "Price"
+
+[node name="ColQty" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1488745913]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+text = "Qty"
+
+[node name="ColTotal" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1916710738]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.44313726, 0.5254902, 0.44313726, 1)
+text = "Total"
 
 [node name="ScrollArea" type="ScrollContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1823401369]
 z_index = 2
@@ -145,14 +191,9 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_a2bjf")
 
-[node name="ItemsList" type="GridContainer" parent="CenterContainer/MainCard/VBoxContainer/ScrollArea" unique_id=125929720]
-modulate = Color(0, 0, 0, 1)
-z_index = 5
+[node name="ItemsList" type="VBoxContainer" parent="CenterContainer/MainCard/VBoxContainer/ScrollArea" unique_id=963816714]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/h_separation = 8
-theme_override_constants/v_separation = 0
-columns = 5
 
 [node name="FooterPanel" type="Panel" parent="CenterContainer/MainCard/VBoxContainer" unique_id=250733271]
 custom_minimum_size = Vector2(0, 100)
@@ -269,20 +310,3 @@ theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 28
 text = "0,00 €"
 horizontal_alignment = 2
-
-[node name="CenterContainer_MainCard_VBoxContainer_HeaderPanel_HeaderRow_CountBadge#Label" type="Label" parent="." unique_id=2033980703]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = 1.0
-offset_right = -10.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_puk5m")
-theme_override_font_sizes/font_size = 12
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1

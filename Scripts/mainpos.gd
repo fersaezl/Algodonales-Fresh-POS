@@ -7,15 +7,13 @@ const IMAGES = "res://Assets/productImages/"
 
 @onready var categories_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll/SectionsGrid
 @onready var products_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid
-@onready var cartTSCN =  $MarginContainer/MainLayout/Content/CartPanel/Cart
+@onready var cartTSCN = $MarginContainer/MainLayout/Content/CartPanel/Cart
 
-var total=0.0
-var pro
 var first_btn
 
 func _ready() -> void:
 	load_categories()
-	first_btn = categories_grid.get_child(0)
+	var first_btn = categories_grid.get_child(0)
 	load_products("all", first_btn)
 
 func load_categories() -> void:
@@ -64,25 +62,18 @@ func show_products(product_list: Array) -> void:
 		btn.button_icon = load(IMAGES + product["image"])
 		btn.pro=product
 		btn.productPressed.connect(addCart)
+		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		products_grid.add_child(btn)
 		
 func addCart(product, quantity):
 	var cart = ProductManager.cart
 	var id = product.id
-	
 	if cart.has(id):
 		cart[id] += 1
 	else:
 		cart[id] = 1
-		
-	Cart2.productsAdded+=1
 	cartTSCN.add_product(product, cart)
+
 func _on_search_bar_text_changed(new_text: String) -> void:
-	if (new_text==""):
-		load_products("all", first_btn)
-		return
-	if current_btn!=first_btn:
-		current_btn.set_selected(false)
-		first_btn.set_selected(true)
 	ProductManager.searchProducts(new_text)
 	show_products(ProductManager.productsFiltered)

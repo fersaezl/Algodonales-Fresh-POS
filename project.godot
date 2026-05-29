@@ -16,9 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Cart="*uid://bhn24jkvghpyl"
 ProductManager="*uid://djccvfvyug6a2"
-Cart2="*uid://b4o2qay5etc2p"
 
 [display]
 

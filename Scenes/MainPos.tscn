@@ -1,12 +1,48 @@
 [gd_scene format=3 uid="uid://bc40ynsrrixmc"]
 
 [ext_resource type="Script" uid="uid://kt4qarp3tsjj" path="res://Scripts/mainpos.gd" id="1_n6lp0"]
-[ext_resource type="PackedScene" uid="uid://cp72yxj37554s" path="res://Scenes/Cart.tscn" id="2_p6x7q"]
+[ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="2_74tx3"]
+[ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_b30p1"]
+[ext_resource type="PackedScene" uid="uid://bxr4whmijjkgs" path="res://Scenes/Cart.tscn" id="2_p6x7q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68xj4"]
 bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74tx3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b30p1"]
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74tx3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvcdn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw1kh"]
 bg_color = Color(0.3196456, 0.69882643, 0.2976064, 1)
@@ -52,6 +88,28 @@ custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_68xj4")
 
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/MainLayout/TopBar" unique_id=2125711988]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/TopBar/CenterContainer" unique_id=31305962]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Logo" type="TextureRect" parent="MarginContainer/MainLayout/TopBar/CenterContainer/HBoxContainer" unique_id=1140248782]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("2_b30p1")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="AppTitle" type="Label" parent="MarginContainer/MainLayout/TopBar/CenterContainer/HBoxContainer" unique_id=1410304969]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_74tx3")
+theme_override_font_sizes/font_size = 22
+text = "Algodonales Fresh POS"
+vertical_alignment = 1
+
 [node name="Content" type="HBoxContainer" parent="MarginContainer/MainLayout" unique_id=1609184870]
 layout_mode = 2
 size_flags_vertical = 3
@@ -60,24 +118,34 @@ theme_override_constants/separation = 20
 [node name="ProductsPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=681048521]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_74tx3")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel" unique_id=1466560855]
 layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 14
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer" unique_id=1660458750]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="ProductsLabel" type="Label" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=651650069]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("2_74tx3")
+theme_override_font_sizes/font_size = 18
 text = "Products"
 
 [node name="SearchBar" type="LineEdit" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1848917538]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_b30p1")
 placeholder_text = "Search..."
 
 [node name="SectionsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=623732389]
+custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="SectionsGrid" type="GridContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll" unique_id=125984713]
 z_index = 10
@@ -88,12 +156,13 @@ columns = 4
 [node name="ProductsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1376810535]
 layout_mode = 2
 size_flags_vertical = 3
+horizontal_scroll_mode = 0
 
 [node name="ProductsGrid" type="GridContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll" unique_id=1078940490]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-columns = 4
+columns = 3
 
 [node name="CartPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=1442308960]
 layout_mode = 2
@@ -106,16 +175,25 @@ layout_mode = 2
 [node name="PaymentPanel" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=1274945131]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvcdn")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/Content/PaymentPanel" unique_id=1372395618]
 layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 14
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer" unique_id=155812337]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="PaymentLabel" type="Label" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1440480209]
 layout_mode = 2
-text = "TOTAL"
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("2_74tx3")
+theme_override_font_sizes/font_size = 18
+text = "Total"
 
 [node name="Cash" type="Button" parent="MarginContainer/MainLayout/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=302579832]
 layout_mode = 2
