@@ -73,7 +73,7 @@ text = "Products"
 
 [node name="SearchBar" type="LineEdit" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1848917538]
 layout_mode = 2
-text = "Search"
+placeholder_text = "Search..."
 
 [node name="SectionsScroll" type="ScrollContainer" parent="MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=623732389]
 layout_mode = 2

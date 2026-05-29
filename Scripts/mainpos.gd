@@ -11,10 +11,11 @@ const IMAGES = "res://Assets/productImages/"
 
 var total=0.0
 var pro
+var first_btn
 
 func _ready() -> void:
 	load_categories()
-	var first_btn = categories_grid.get_child(0)
+	first_btn = categories_grid.get_child(0)
 	load_products("all", first_btn)
 
 func load_categories() -> void:
@@ -86,5 +87,11 @@ func addCart(product,quantity):
 
 
 func _on_search_bar_text_changed(new_text: String) -> void:
+	if (new_text==""):
+		load_products("all", first_btn)
+		return
+	if current_btn!=first_btn:
+		current_btn.set_selected(false)
+		first_btn.set_selected(true)
 	ProductManager.searchProducts(new_text)
 	show_products(ProductManager.productsFiltered)
