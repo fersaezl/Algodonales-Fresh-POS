@@ -33,6 +33,7 @@ func _on_login_pressed():
 	for u in users:
 		if (u["dni"] == user or u["name"].to_lower() == user.to_lower()) and u["password"] == pass_:
 			_show_error("")
+			ProductManager.current_user = u["name"]
 			get_tree().change_scene_to_file("res://Scenes/MainPos.tscn")
 			return
 

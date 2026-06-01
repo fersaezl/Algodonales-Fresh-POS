@@ -5,6 +5,7 @@ var productsFiltered=[]
 var sections=[]
 var cart={}
 var prod
+var current_user: String = ""
 func _ready():
 	products=readProducts()
 	sections=readSections()

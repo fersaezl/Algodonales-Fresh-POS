@@ -85,7 +85,7 @@ border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[node name="Cart" type="Control" unique_id=453017138]
+[node name="Cart" type="Control" unique_id=453017138 node_paths=PackedStringArray("discount_popup")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,7 +93,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3otky")
-tax_rate = null
+discount_popup = NodePath("DiscountPopup")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1095991892]
 layout_mode = 1
@@ -104,7 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainCard" type="Panel" parent="CenterContainer" unique_id=1438550758]
-custom_minimum_size = Vector2(406, 530)
+custom_minimum_size = Vector2(406, 520)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_puk5m")
 
@@ -353,3 +353,4 @@ horizontal_alignment = 2
 
 [connection signal="pressed" from="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow/ClearBtn" to="." method="_on_clear_btn_pressed"]
 [connection signal="pressed" from="CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Discount/EditDiscountBtn" to="." method="_on_edit_discount_pressed"]
+[connection signal="discount_applied" from="DiscountPopup" to="." method="_on_discount_applied"]

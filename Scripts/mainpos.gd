@@ -5,9 +5,11 @@ const PRODUCT_BTN = preload("res://Scenes/Button/ProductButton.tscn")
 const ICONS = "res://Assets/productIcon/"
 const IMAGES = "res://Assets/productImages/"
 
-@onready var categories_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll/SectionsGrid
-@onready var products_grid = $MarginContainer/MainLayout/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid
-@onready var cartTSCN = $MarginContainer/MainLayout/Content/CartPanel/Cart
+@onready var categories_grid = $MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll/SectionsGrid
+@onready var products_grid = $MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid
+@onready var cartTSCN = $MarginContainer/MainLayout/MarginContainer/Content/CartPanel/Cart
+@onready var username_label = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection/UserName
+@onready var datetime_label = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection/DateTime
 
 var first_btn
 
@@ -15,6 +17,7 @@ func _ready() -> void:
 	load_categories()
 	first_btn = categories_grid.get_child(0)
 	load_products("all", first_btn)
+	username_label.text = ProductManager.current_user
 
 func load_categories() -> void:
 	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
@@ -83,3 +86,7 @@ func _on_search_bar_text_changed(new_text: String) -> void:
 		first_btn.set_selected(true)
 	ProductManager.searchProducts(new_text)
 	show_products(ProductManager.productsFiltered)
+
+func _process(_delta) -> void:
+	var t = Time.get_datetime_dict_from_system()
+	datetime_label.text = "%02d/%02d/%04d  %02d:%02d" % [t.day, t.month, t.year, t.hour, t.minute]

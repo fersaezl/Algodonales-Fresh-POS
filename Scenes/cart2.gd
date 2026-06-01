@@ -1,6 +1,7 @@
 extends Control
 
 @export var tax_rate: float = 0.21
+@export var discount_popup : CanvasLayer
 var discount: float = 0.0
 
 @onready var items_list = $CenterContainer/MainCard/VBoxContainer/ScrollArea/ItemsList
