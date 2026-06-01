@@ -252,7 +252,7 @@ theme_override_styles/focus = ExtResource("4_cpvl2")
 theme_override_colors/checkbox_checked_color = Color(0, 0, 0, 1)
 theme_override_colors/checkbox_unchecked_color = Color(0, 0, 0, 1)
 button_group = SubResource("ButtonGroup_yaj15")
-text = "Todos los productos"
+text = "All products"
 alignment = 2
 
 [node name="CheckBox4" type="CheckBox" parent="MarginContainer/MainLayout/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=173918576]
@@ -285,7 +285,7 @@ theme_override_styles/focus = ExtResource("4_cpvl2")
 theme_override_colors/checkbox_checked_color = Color(0, 0.8, 0, 1)
 theme_override_colors/checkbox_unchecked_color = Color(0, 0.8, 0, 1)
 button_group = SubResource("ButtonGroup_yaj15")
-text = "Stock alto
+text = "High stock
 "
 alignment = 2
 
@@ -319,7 +319,8 @@ theme_override_styles/focus = ExtResource("4_cpvl2")
 theme_override_colors/checkbox_checked_color = Color(1, 1, 0, 1)
 theme_override_colors/checkbox_unchecked_color = Color(1, 1, 0, 1)
 button_group = SubResource("ButtonGroup_yaj15")
-text = "Stock bajo"
+text = "Low stock
+"
 alignment = 2
 
 [node name="CheckBox3" type="CheckBox" parent="MarginContainer/MainLayout/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1061158316]
@@ -346,8 +347,7 @@ theme_override_styles/focus = ExtResource("4_cpvl2")
 theme_override_colors/checkbox_checked_color = Color(1, 0, 0, 1)
 theme_override_colors/checkbox_unchecked_color = Color(1, 0, 0, 1)
 button_group = SubResource("ButtonGroup_yaj15")
-text = "Sin stock
-"
+text = "Out of stock"
 alignment = 2
 
 [node name="ProductContainer" type="PanelContainer" parent="MarginContainer/MainLayout/Content" unique_id=544394706]
@@ -452,7 +452,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
-text = "No stock"
+text = "Out of stock"
 
 [node name="Label2" type="Label" parent="MarginContainer/MainLayout/Content/StockPanel/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=698991970]
 layout_mode = 2
