@@ -1,5 +1,8 @@
 extends Control
 
+@export var tax_rate: float = 0.21
+var discount: float = 0.0
+
 @onready var items_list = $CenterContainer/MainCard/VBoxContainer/ScrollArea/ItemsList
 
 const IMAGES       = "res://Assets/productImages/"
@@ -9,6 +12,31 @@ const BORDER_COLOR = Color(0.8980392, 0.92941177, 0.8980392, 1)
 
 func add_product(_product, cart: Dictionary) -> void:
 	await _refresh_display(cart)
+
+func _on_edit_discount_pressed() -> void:
+	if discount_popup:
+		discount_popup.open()
+
+func _on_discount_applied(amount: float) -> void:
+	discount = min(amount, _get_subtotal())
+	_update_footer()
+
+func _update_footer() -> void:
+	var subtotal = _get_subtotal()
+	var tax      = (subtotal - discount) * tax_rate
+	var total    = subtotal - discount + tax
+	%SubtotalAmount.text = "%.2f €" % subtotal
+	%DiscountAmount.text = "%.2f €" % discount
+	%TaxAmount.text      = "%.2f €" % tax
+	%TotalAmount.text    = "%.2f €" % total
+
+func _get_subtotal() -> float:
+	var total := 0.0
+	for prod_id in ProductManager.cart:
+		var pro = ProductManager.searchProductByid(prod_id)
+		if pro:
+			total += float(pro.price) * ProductManager.cart[prod_id]
+	return total
 
 func _refresh_display(cart: Dictionary) -> void:
 	for child in items_list.get_children():
@@ -28,8 +56,8 @@ func _refresh_display(cart: Dictionary) -> void:
 		total_qty   += qty
 		_build_row(prod_id, pro, qty, subtotal)
 
-	%TotalAmount.text = "%.2f €" % grand_total
-	%Badge.text       = str(total_qty)
+	%Badge.text = str(total_qty)
+	_update_footer()
 
 func _build_row(prod_id, pro, qty: int, subtotal: float) -> void:
 	var panel = PanelContainer.new()
@@ -150,5 +178,7 @@ func _on_clear_btn_pressed() -> void:
 	ProductManager.cart.clear()
 	for child in items_list.get_children():
 		child.queue_free()
-	%TotalAmount.text = "0,00 €"
+	%SubtotalAmount.text = "0.00 €"
+	%TotalAmount.text = "0.00 €"
+	%TaxAmount.text = "0.00 €"
 	%Badge.text       = "0"

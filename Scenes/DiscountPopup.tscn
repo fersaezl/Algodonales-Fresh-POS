@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://daiotxbrc4evt"]
+
+[ext_resource type="Script" uid="uid://3cmubh4mdp3x" path="res://Scripts/discount.gd" id="1_odkml"]
+[ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="1_pbn24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odkml"]
+bg_color = Color(0.9012057, 0.97106975, 0.94640857, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.1254902)
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wodvs"]
+bg_color = Color(0.68285894, 0.90469545, 0.82476306, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45037454, 0.7391503, 0.64244306, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uou7m"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.81960785, 0.8980392, 0.81960785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyejw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4wes"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.33333334, 0.5372549, 0.33333334, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4pk2"]
+bg_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2s3lf"]
+bg_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_et675"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=985966220]
+script = ExtResource("1_odkml")
+
+[node name="PopupPanel" type="Panel" parent="." unique_id=60615544]
+z_index = 300
+z_as_relative = false
+custom_minimum_size = Vector2(300, 100)
+offset_left = 430.0
+offset_top = 267.0
+offset_right = 730.0
+offset_bottom = 389.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_odkml")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel" unique_id=1370754262]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="PopupTitle" type="Label" parent="PopupPanel/VBoxContainer" unique_id=146464084]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("1_pbn24")
+theme_override_font_sizes/font_size = 16
+text = "Apply discount"
+horizontal_alignment = 1
+
+[node name="DiscountInput" type="LineEdit" parent="PopupPanel/VBoxContainer" unique_id=66484712]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_placeholder_color = Color(0.101960786, 0.23921569, 0.101960786, 0.7058824)
+theme_override_fonts/font = ExtResource("1_pbn24")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_wodvs")
+placeholder_text = "Enter amount (e.g. 2.50)"
+
+[node name="PopupButtons" type="HBoxContainer" parent="PopupPanel/VBoxContainer" unique_id=25283346]
+layout_mode = 2
+
+[node name="CancelBtn" type="Button" parent="PopupPanel/VBoxContainer/PopupButtons" unique_id=295397993]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_colors/font_pressed_color = Color(0.119288735, 0.21449986, 0.11932082, 1)
+theme_override_colors/font_hover_color = Color(0.33380058, 0.5364625, 0.3335481, 1)
+theme_override_fonts/font = ExtResource("1_pbn24")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uou7m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uyejw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a4wes")
+text = "Cancel"
+
+[node name="ApplyBtn" type="Button" parent="PopupPanel/VBoxContainer/PopupButtons" unique_id=1361044565]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("1_pbn24")
+theme_override_styles/normal = SubResource("StyleBoxFlat_k4pk2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2s3lf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_et675")
+text = "Apply"
+
+[connection signal="pressed" from="PopupPanel/VBoxContainer/PopupButtons/CancelBtn" to="." method="_on_cancel"]
+[connection signal="pressed" from="PopupPanel/VBoxContainer/PopupButtons/ApplyBtn" to="." method="_on_apply"]
