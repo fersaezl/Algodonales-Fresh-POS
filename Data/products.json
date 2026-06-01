@@ -185,7 +185,7 @@
   },
   {
 	"id": 24,
-	"productName": "Greek Yogurt (x4)",
+	"productName": "Greek Yogurt",
 	"price": 2.3,
 	"stock": 44,
 	"section": "dairy",
@@ -265,7 +265,7 @@
   },
   {
 	"id": 34,
-	"productName": "Cooked Chickpeas",
+	"productName": "Chickpeas",
 	"price": 0.7,
 	"stock": 90,
 	"section": "pantry",
@@ -289,7 +289,7 @@
   },
   {
 	"id": 37,
-	"productName": "Tuna in Oil Pack 3",
+	"productName": "Tuna in Oil",
 	"price": 3.6,
 	"stock": 60,
 	"section": "pantry",

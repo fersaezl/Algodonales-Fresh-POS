@@ -46,13 +46,24 @@ func _build_row(prod_id, pro, qty: int, subtotal: float) -> void:
 
 	var row = HBoxContainer.new()
 	row.add_theme_constant_override("separation", 0)
+	
+	var img_wrapper = Control.new()                                                                                                                            
+	img_wrapper.custom_minimum_size = Vector2(35, 35)
+	img_wrapper.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	img_wrapper.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	img_wrapper.clip_contents = true
 
 	var img = TextureRect.new()
-	img.texture             = load(IMAGES + pro.image)
-	img.custom_minimum_size = Vector2(50, 50)
-	img.expand_mode         = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
-	img.stretch_mode        = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	img.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	img.texture      = load(IMAGES + pro.image)
+	img.expand_mode  = TextureRect.EXPAND_IGNORE_SIZE
+	img.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	img.anchor_right  = 1.0
+	img.anchor_bottom = 1.0
+	img.offset_left   = 0
+	img.offset_top    = 0
+	img.offset_right  = 0
+	img.offset_bottom = 0
+	img_wrapper.add_child(img) 
 
 	var name_lbl = Label.new()
 	name_lbl.text                  = pro.productName
@@ -112,7 +123,7 @@ func _build_row(prod_id, pro, qty: int, subtotal: float) -> void:
 	total_lbl.add_theme_font_size_override("font_size", 13)
 	total_lbl.add_theme_color_override("font_color", FONT_COLOR)
 
-	row.add_child(img)
+	row.add_child(img_wrapper)
 	row.add_child(name_lbl)
 	row.add_child(price_lbl)
 	row.add_child(qty_box)
