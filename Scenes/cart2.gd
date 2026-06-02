@@ -184,6 +184,7 @@ func _on_clear_btn_pressed() -> void:
 		child.queue_free()
 	%SubtotalAmount.text = "0.00 €"
 	%TotalAmount.text = "0.00 €"
+	%DiscountAmount.text = "0.00 €"
 	%TaxAmount.text = "0.00 €"
 	%Badge.text       = "0"
 	total_changed.emit(0.0)
