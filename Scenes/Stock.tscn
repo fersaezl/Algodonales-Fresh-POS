@@ -137,7 +137,7 @@ theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qjxx2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_6fb2v")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vooxp")
-text = "History"
+text = "Sales History"
 
 [node name="Stock" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection" unique_id=63374965]
 custom_minimum_size = Vector2(65, 55)
