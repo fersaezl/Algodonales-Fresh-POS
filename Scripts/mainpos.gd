@@ -15,6 +15,7 @@ const IMAGES = "res://Assets/productImages/"
 @onready var btn_stock = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Stock
 @onready var paid_input = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/PaidInput
 @onready var change_amount = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/ChangeAmount
+@onready var payment_total = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/TotalBlock/VBoxContainer/TotalAmount
 
 var first_btn
 
@@ -24,6 +25,8 @@ func _ready() -> void:
 	load_products("all", first_btn)
 	username_label.text = ProductManager.current_user
 	_set_active_tab(btn_sales)
+	payment_total.text = "0.00 €"
+	cartTSCN.total_changed.connect(_on_cart_total_changed)
 
 func load_categories() -> void:
 	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
@@ -43,6 +46,8 @@ func load_categories() -> void:
 		categories_grid.add_child(btn)
 
 var current_btn = null
+var current_total: float = 0.0
+var payment_method: String = "cash"
 
 func load_products(section_id: String, btn = null) -> void:
 	if current_btn:
@@ -83,15 +88,8 @@ func addCart(product, quantity):
 		cart[id] = 1
 	cartTSCN.add_product(product, cart)
 	
-func _on_paid_input_text_changed(new_text: String) -> void:
-	var paid = float(new_text) if new_text != "" else 0.0
-	var total = 0.0
-	for prod_id in ProductManager.cart:
-		var pro = ProductManager.searchProductByid(prod_id)
-		if pro:
-			total += float(pro.price) * ProductManager.cart[prod_id]
-		var change = paid - total
-		change_amount.text = "%.2f €" % max(change, 0.0)
+func _on_paid_input_text_changed(_new_text: String) -> void:
+	_update_change()
 	
 func _set_active_tab(active_btn: Button) -> void:
 	for btn in [btn_sales, btn_history, btn_stock]:
@@ -118,7 +116,16 @@ func _on_search_bar_text_changed(new_text: String) -> void:
 func _process(_delta) -> void:
 	var t = Time.get_datetime_dict_from_system()
 	datetime_label.text = "%02d/%02d/%04d  %02d:%02d" % [t.day, t.month, t.year, t.hour, t.minute]
+	
+func _update_change() -> void:
+	var paid = float(paid_input.text) if paid_input.text != "" else 0.0
+	var change = paid - current_total
+	change_amount.text = "%.2f €" % max(change, 0.0)
 
+func _on_cart_total_changed(amount: float) -> void:
+	current_total = amount
+	payment_total.text = "%.2f €" % amount
+	_update_change()
 
 func _on_sales_pressed() -> void:
 	_set_active_tab(btn_sales)

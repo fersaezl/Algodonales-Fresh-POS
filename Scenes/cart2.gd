@@ -1,5 +1,7 @@
 extends Control
 
+signal total_changed(amount: float)
+
 @export var tax_rate: float = 0.21
 @export var discount_popup : CanvasLayer
 var discount: float = 0.0
@@ -30,6 +32,7 @@ func _update_footer() -> void:
 	%DiscountAmount.text = "%.2f €" % discount
 	%TaxAmount.text      = "%.2f €" % tax
 	%TotalAmount.text    = "%.2f €" % total
+	total_changed.emit(total)
 
 func _get_subtotal() -> float:
 	var total := 0.0
@@ -183,3 +186,4 @@ func _on_clear_btn_pressed() -> void:
 	%TotalAmount.text = "0.00 €"
 	%TaxAmount.text = "0.00 €"
 	%Badge.text       = "0"
+	total_changed.emit(0.0)
