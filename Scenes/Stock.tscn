@@ -4,6 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_qjxx2"]
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="3_6fb2v"]
 [ext_resource type="StyleBox" uid="uid://ybnnvvndfs1f" path="res://Scenes/Button/new_style_box_flat.tres" id="4_cpvl2"]
+[ext_resource type="Texture2D" uid="uid://bo12t0nb087i3" path="res://Assets/Icons/paquete-o-empaquetar.png" id="5_qjxx2"]
+[ext_resource type="Texture2D" uid="uid://bs3iu6hu5fydx" path="res://Assets/Icons/advertencia.png" id="6_vooxp"]
+[ext_resource type="Texture2D" uid="uid://rq8v8306l7ur" path="res://Assets/Icons/prohibido.png" id="7_oxptv"]
+[ext_resource type="StyleBox" uid="uid://dtqxvf8x7sno3" path="res://Scenes/Button/StockButton.tres" id="8_oxptv"]
+[ext_resource type="Texture2D" uid="uid://cph2xkvlyxevy" path="res://Assets/Icons/lapiz.png" id="9_i2467"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpvl2"]
 bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
@@ -43,6 +48,18 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 shadow_color = Color(0, 0, 0, 0.11764706)
 shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2467"]
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
 bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
@@ -404,77 +421,108 @@ theme_override_fonts/font = ExtResource("3_6fb2v")
 theme_override_font_sizes/font_size = 18
 text = "Stock resume"
 
-[node name="TotalProducts" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer" unique_id=1996386804]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer" unique_id=785578975]
+layout_mode = 2
+theme_override_constants/margin_top = 9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=2113957017]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/TotalProducts" unique_id=463416551]
+[node name="TotalProducts" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1996386804]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/TotalProducts" unique_id=88172406]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts" unique_id=463416551]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("5_qjxx2")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts" unique_id=88172406]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=1941010985]
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=1941010985]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "Total products"
 
-[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=756081669]
+[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=756081669]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 
-[node name="LowStock" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer" unique_id=1637207359]
+[node name="LowStock" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1637207359]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/LowStock" unique_id=1448081921]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock" unique_id=1448081921]
+texture_filter = 1
 layout_mode = 2
+texture = ExtResource("6_vooxp")
+expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/LowStock" unique_id=1681459387]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock" unique_id=1681459387]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1761909594]
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1761909594]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "Low stock"
 
-[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1055513625]
+[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1055513625]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 
-[node name="NoStock" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer" unique_id=521072556]
+[node name="NoStock" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=521072556]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/NoStock" unique_id=1299665732]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock" unique_id=1299665732]
 layout_mode = 2
+texture = ExtResource("7_oxptv")
+expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/NoStock" unique_id=539543339]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock" unique_id=539543339]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=851963850]
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=851963850]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "Out of stock"
 
-[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=698991970]
+[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=698991970]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer" unique_id=454143004]
-custom_minimum_size = Vector2(0, 30)
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=986291666]
 layout_mode = 2
+theme_override_constants/margin_top = 20
 
-[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/PanelContainer" unique_id=980972666]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=454143004]
+custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
+theme_override_styles/panel = ExtResource("8_oxptv")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/PanelContainer/Button" unique_id=872875384]
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=980972666]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("8_oxptv")
+theme_override_styles/normal_mirrored = ExtResource("8_oxptv")
+theme_override_styles/pressed = ExtResource("8_oxptv")
+theme_override_styles/pressed_mirrored = ExtResource("8_oxptv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i2467")
+theme_override_styles/hover_mirrored = ExtResource("8_oxptv")
+theme_override_styles/hover_pressed = ExtResource("8_oxptv")
+theme_override_styles/hover_pressed_mirrored = ExtResource("8_oxptv")
+theme_override_styles/disabled = ExtResource("8_oxptv")
+theme_override_styles/disabled_mirrored = ExtResource("8_oxptv")
+theme_override_styles/focus = ExtResource("8_oxptv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/Button" unique_id=872875384]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -482,11 +530,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/PanelContainer/Button/HBoxContainer" unique_id=2074955142]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/Button/HBoxContainer" unique_id=2074955142]
 layout_mode = 2
+texture = ExtResource("9_i2467")
+expand_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/PanelContainer/Button/HBoxContainer" unique_id=2121522791]
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/Button/HBoxContainer" unique_id=2121522791]
 layout_mode = 2
+text = "Ajuste de inventario"
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
 custom_minimum_size = Vector2(0, 40)
