@@ -1,0 +1,743 @@
+[gd_scene format=3 uid="uid://db5tbved5opki"]
+
+[ext_resource type="Script" uid="uid://5odd1jxr2xmn" path="res://Scripts/stock.gd" id="1_yaj15"]
+[ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_qjxx2"]
+[ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="3_6fb2v"]
+[ext_resource type="ButtonGroup" uid="uid://bighsalt4tdye" path="res://Assets/Buttons/new_button_group.tres" id="4_i2467"]
+[ext_resource type="Texture2D" uid="uid://bo12t0nb087i3" path="res://Assets/Icons/paquete-o-empaquetar.png" id="5_qjxx2"]
+[ext_resource type="Texture2D" uid="uid://bs3iu6hu5fydx" path="res://Assets/Icons/advertencia.png" id="6_vooxp"]
+[ext_resource type="Texture2D" uid="uid://rq8v8306l7ur" path="res://Assets/Icons/prohibido.png" id="7_oxptv"]
+[ext_resource type="StyleBox" uid="uid://dtqxvf8x7sno3" path="res://Scenes/Button/StockButton.tres" id="8_oxptv"]
+[ext_resource type="Texture2D" uid="uid://cph2xkvlyxevy" path="res://Assets/Icons/lapiz.png" id="9_i2467"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpvl2"]
+bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjxx2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fb2v"]
+bg_color = Color(0.14901961, 0.6, 0.14901961, 0.3019608)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vooxp"]
+bg_color = Color(1, 1, 1, 0.101960786)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74tx3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rrl5"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f3ek"]
+bg_color = Color(0, 0.26666668, 0.8235294, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcjab"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygs6a"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcv2k"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0.8, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1h3e"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15gxq"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjhiu"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5m7p"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fho2"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qphvg"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0f0hl"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvcdn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lew7a"]
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_top = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2467"]
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
+bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
+
+[node name="Stock" type="Control" unique_id=1141181362]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yaj15")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1245416890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.92941177, 0.9529412, 0.92941177, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=867928888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="MainLayout" type="VBoxContainer" parent="MarginContainer" unique_id=1331561640]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1504947383]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cpvl2")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/TopBar" unique_id=2048807646]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer" unique_id=1369190367]
+layout_mode = 2
+
+[node name="LeftSection" type="HBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=389456922]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Logo" type="TextureRect" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/LeftSection" unique_id=448961885]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_qjxx2")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="AppTitle" type="Label" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/LeftSection" unique_id=355655026]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Algodonales Fresh POS"
+vertical_alignment = 1
+
+[node name="MenuSection" type="HBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=1337726317]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Sales" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection" unique_id=529643664]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qjxx2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6fb2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vooxp")
+text = "Sales"
+
+[node name="History" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection" unique_id=1091768083]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qjxx2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6fb2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vooxp")
+text = "Sales History"
+
+[node name="Stock" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection" unique_id=63374965]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qjxx2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6fb2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vooxp")
+text = "Stock"
+
+[node name="RightSection" type="VBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=32101082]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="UserName" type="Label" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection" unique_id=1115640747]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="DateTime" type="Label" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection" unique_id=686461716]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout" unique_id=418237664]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Content" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer" unique_id=1609184870]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="CategoryPanel" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content" unique_id=681048521]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_74tx3")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel" unique_id=1466560855]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer" unique_id=1660458750]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CategoryLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer" unique_id=651650069]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_font_sizes/font_size = 18
+text = "Category
+"
+
+[node name="SectionsGrid" type="GridContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer" unique_id=125984713]
+z_index = 10
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer" unique_id=950006165]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=268567390]
+layout_mode = 2
+
+[node name="CategoryLabel2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2" unique_id=89646286]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_font_sizes/font_size = 18
+text = "Stock filter"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2" unique_id=440235329]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer" unique_id=1027414044]
+layout_mode = 2
+
+[node name="All" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1069134711]
+layout_direction = 3
+layout_mode = 2
+alignment = 1
+
+[node name="BtnAll" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/All" unique_id=152030020]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rrl5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5f3ek")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcjab")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/All" unique_id=2060351711]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "All products"
+vertical_alignment = 1
+
+[node name="High" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=812905618]
+layout_direction = 3
+layout_mode = 2
+alignment = 1
+
+[node name="BtnHigh" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/High" unique_id=511798606]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygs6a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcv2k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s1h3e")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/High" unique_id=1229327143]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "High Stock"
+vertical_alignment = 1
+
+[node name="Low" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1781781144]
+layout_direction = 3
+layout_mode = 2
+alignment = 1
+
+[node name="BtnLow" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Low" unique_id=898455965]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_15gxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjhiu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f5m7p")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Low" unique_id=750034946]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Low Stock"
+vertical_alignment = 1
+
+[node name="Out" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1702740986]
+layout_direction = 3
+layout_mode = 2
+alignment = 1
+
+[node name="BtnOut" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Out" unique_id=1124792012]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_5fho2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qphvg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0f0hl")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Out" unique_id=908800620]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Out of Stock"
+vertical_alignment = 1
+
+[node name="ProductContainer" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content" unique_id=544394706]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvcdn")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer" unique_id=1985040738]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer" unique_id=324000052]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="InventoryLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer" unique_id=891720372]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_font_sizes/font_size = 18
+text = "Inventory"
+
+[node name="ColHeaderPanel" type="Panel" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer" unique_id=1334167049]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lew7a")
+
+[node name="ColHeaderRow" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ColHeaderPanel" unique_id=1773928113]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColImg" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=641773919]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="ColProduct" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=502655719]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+text = "Product"
+
+[node name="ColPrice" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=275343759]
+custom_minimum_size = Vector2(98, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+text = "Category"
+
+[node name="ColQty" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1267619743]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.44313726, 0.56078434, 0.44313726, 1)
+text = "Stock"
+
+[node name="ColStatus" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=341530478]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.44313726, 0.5254902, 0.44313726, 1)
+text = "Status"
+
+[node name="ColTotal" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ColHeaderPanel/ColHeaderRow" unique_id=1674990240]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.44313726, 0.5254902, 0.44313726, 1)
+text = "Total"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer" unique_id=1435857969]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ProductsList" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1028352252]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="StockPanel" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content" unique_id=1274945131]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvcdn")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel" unique_id=1372395618]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer" unique_id=155812337]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StockLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer" unique_id=1440480209]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_font_sizes/font_size = 18
+text = "Stock resume"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer" unique_id=785578975]
+layout_mode = 2
+theme_override_constants/margin_top = 9
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=2113957017]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TotalProducts" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1996386804]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts" unique_id=463416551]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("5_qjxx2")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts" unique_id=88172406]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=1941010985]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Total products"
+
+[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=756081669]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="LowStock" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1637207359]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock" unique_id=1448081921]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_vooxp")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock" unique_id=1681459387]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1761909594]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Low stock"
+
+[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1055513625]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="NoStock" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=521072556]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock" unique_id=1299665732]
+layout_mode = 2
+texture = ExtResource("7_oxptv")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock" unique_id=539543339]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=851963850]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Out of stock"
+
+[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=698991970]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=986291666]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=454143004]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_oxptv")
+
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=980972666]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/icon_max_width = 20
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_icons/icon = ExtResource("9_i2467")
+theme_override_styles/normal = ExtResource("8_oxptv")
+theme_override_styles/normal_mirrored = ExtResource("8_oxptv")
+theme_override_styles/pressed = ExtResource("8_oxptv")
+theme_override_styles/pressed_mirrored = ExtResource("8_oxptv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i2467")
+theme_override_styles/hover_mirrored = ExtResource("8_oxptv")
+theme_override_styles/hover_pressed = ExtResource("8_oxptv")
+theme_override_styles/hover_pressed_mirrored = ExtResource("8_oxptv")
+theme_override_styles/disabled = ExtResource("8_oxptv")
+theme_override_styles/disabled_mirrored = ExtResource("8_oxptv")
+theme_override_styles/focus = ExtResource("8_oxptv")
+text = "Stock management"
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
+
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Sales" to="." method="_on_sales_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/History" to="." method="_on_history_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Stock" to="." method="_on_stock_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/All/BtnAll" to="." method="_on_btn_all_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/High/BtnHigh" to="." method="_on_btn_high_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Low/BtnLow" to="." method="_on_btn_low_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Out/BtnOut" to="." method="_on_btn_out_pressed"]

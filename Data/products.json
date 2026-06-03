@@ -1,0 +1,338 @@
+[
+  {
+	"id": 1,
+	"productName": "Golden Apple",
+	"price": 2.45,
+	"stock": 50,
+	"section": "fruit",
+	"image": "apple.jpg"
+  },
+  {
+	"id": 2,
+	"productName": "Banana",
+	"price": 1.99,
+	"stock": 49,
+	"section": "fruit",
+	"image": "banana.jpg"
+  },
+  {
+	"id": 3,
+	"productName": "Sierra Tomato",
+	"price": 3.2,
+	"stock": 18,
+	"section": "vegetables",
+	"image": "tomato.jpg"
+  },
+  {
+	"id": 4,
+	"productName": "Lettuce",
+	"price": 1.1,
+	"stock": 100,
+	"section": "vegetables",
+	"image": "lettuce.jpg"
+  },
+  {
+	"id": 5,
+	"productName": "Orange",
+	"price": 2.0,
+	"stock": 68,
+	"section": "fruit",
+	"image": "orange.jpg"
+  },
+  {
+	"id": 6,
+	"productName": "Sweet Mandarin",
+	"price": 2.45,
+	"stock": 100,
+	"section": "fruit",
+	"image": "mandarin.jpg"
+  },
+  {
+	"id": 7,
+	"productName": "Conference Pear",
+	"price": 2.8,
+	"stock": 15,
+	"section": "fruit",
+	"image": "pear.jpg"
+  },
+  {
+	"id": 8,
+	"productName": "Green Kiwi",
+	"price": 3.1,
+	"stock": 45,
+	"section": "fruit",
+	"image": "kiwi.jpg"
+  },
+  {
+	"id": 9,
+	"productName": "Courgette",
+	"price": 1.75,
+	"stock": 30,
+	"section": "vegetables",
+	"image": "courgette.jpg"
+  },
+  {
+	"id": 10,
+	"productName": "Aubergine",
+	"price": 1.9,
+	"stock": 32,
+	"section": "vegetables",
+	"image": "aubergine.jpg"
+  },
+  {
+	"id": 11,
+	"productName": "Red Pepper",
+	"price": 2.2,
+	"stock": 40,
+	"section": "vegetables",
+	"image": "pepper.jpg"
+  },
+  {
+	"id": 12,
+	"productName": "Sweet Onion",
+	"price": 1.3,
+	"stock": 90,
+	"section": "vegetables",
+	"image": "onion.jpg"
+  },
+  {
+	"id": 13,
+	"productName": "Chicken Breast",
+	"price": 6.5,
+	"stock": 45,
+	"section": "meat",
+	"image": "chicken.jpg"
+  },
+  {
+	"id": 14,
+	"productName": "Beef Entrecote",
+	"price": 12.9,
+	"stock": 50,
+	"section": "meat",
+	"image": "beef_entrecote.jpg"
+  },
+  {
+	"id": 15,
+	"productName": "Minced Meat",
+	"price": 5.6,
+	"stock": 45,
+	"section": "meat",
+	"image": "minced_meat.jpg"
+  },
+  {
+	"id": 16,
+	"productName": "Pork Chops",
+	"price": 6.9,
+	"stock": 18,
+	"section": "meat",
+	"image": "pork_chops.jpg"
+  },
+  {
+	"id": 17,
+	"productName": "Beef Burgers",
+	"price": 4.95,
+	"stock": 22,
+	"section": "meat",
+	"image": "burger.jpg"
+  },
+  {
+	"id": 18,
+	"productName": "Fresh Sea Bass",
+	"price": 8.4,
+	"stock": 23,
+	"section": "fish",
+	"image": "fresh_sea_bass.jpg"
+  },
+  {
+	"id": 19,
+	"productName": "Salmon",
+	"price": 14.2,
+	"stock": 30,
+	"section": "fish",
+	"image": "salmon.jpg"
+  },
+  {
+	"id": 20,
+	"productName": "Fresh Hake",
+	"price": 9.1,
+	"stock": 7,
+	"section": "fish",
+	"image": "hake.jpg"
+  },
+  {
+	"id": 21,
+	"productName": "Raw Prawns",
+	"price": 11.5,
+	"stock": 12,
+	"section": "fish",
+	"image": "raw_prawns.jpg"
+  },
+  {
+	"id": 22,
+	"productName": "Whole Milk 1L",
+	"price": 1.05,
+	"stock": 200,
+	"section": "dairy",
+	"image": "whole_milk.jpg"
+  },
+  {
+	"id": 23,
+	"productName": "Skimmed Milk 1L",
+	"price": 1.05,
+	"stock": 180,
+	"section": "dairy",
+	"image": "skimmed_milk.jpg"
+  },
+  {
+	"id": 24,
+	"productName": "Greek Yogurt",
+	"price": 2.3,
+	"stock": 44,
+	"section": "dairy",
+	"image": "yogurt.jpg"
+  },
+  {
+	"id": 25,
+	"productName": "Payoyo Cheese",
+	"price": 9.5,
+	"stock": 25,
+	"section": "dairy",
+	"image": "payoyo_cheese.jpg"
+  },
+  {
+	"id": 26,
+	"productName": "Butter 250g",
+	"price": 2.15,
+	"stock": 55,
+	"section": "dairy",
+	"image": "butter.jpg"
+  },
+  {
+	"id": 27,
+	"productName": "Vanilla Custard",
+	"price": 1.95,
+	"stock": 75,
+	"section": "dairy",
+	"image": "vanilla_custard.jpg"
+  },
+  {
+	"id": 28,
+	"productName": "Macaroni 500g",
+	"price": 0.85,
+	"stock": 150,
+	"section": "pantry",
+	"image": "macaroni.jpg"
+  },
+  {
+	"id": 29,
+	"productName": "Spaghetti 500g",
+	"price": 0.9,
+	"stock": 128,
+	"section": "pantry",
+	"image": "spaghetti.jpg"
+  },
+  {
+	"id": 30,
+	"productName": "Fusilli 500g",
+	"price": 0.95,
+	"stock": 4,
+	"section": "pantry",
+	"image": "fusilli.jpg"
+  },
+  {
+	"id": 31,
+	"productName": "Bomba Rice 1kg",
+	"price": 1.95,
+	"stock": 100,
+	"section": "pantry",
+	"image": "bomba_rice.jpg"
+  },
+  {
+	"id": 32,
+	"productName": "Brown Rice 1kg",
+	"price": 2.2,
+	"stock": 80,
+	"section": "pantry",
+	"image": "brown_rice.jpg"
+  },
+  {
+	"id": 33,
+	"productName": "Olive Oil",
+	"price": 45.0,
+	"stock": 40,
+	"section": "pantry",
+	"image": "oil.jpg"
+  },
+  {
+	"id": 34,
+	"productName": "Chickpeas",
+	"price": 0.7,
+	"stock": 90,
+	"section": "pantry",
+	"image": "cooked_chickpeas.jpg"
+  },
+  {
+	"id": 35,
+	"productName": "Cooked Lentils",
+	"price": 0.75,
+	"stock": 85,
+	"section": "pantry",
+	"image": "cooked_lentils.jpg"
+  },
+  {
+	"id": 36,
+	"productName": "Tomato Sauce",
+	"price": 1.2,
+	"stock": 4,
+	"section": "pantry",
+	"image": "tomato_sauce.jpg"
+  },
+  {
+	"id": 37,
+	"productName": "Tuna in Oil",
+	"price": 3.6,
+	"stock": 60,
+	"section": "pantry",
+	"image": "tuna.jpg"
+  },
+  {
+	"id": 38,
+	"productName": "Mineral Water",
+	"price": 2.1,
+	"stock": 120,
+	"section": "beverages",
+	"image": "water.jpg"
+  },
+  {
+	"id": 39,
+	"productName": "Rioja Red Wine",
+	"price": 7.5,
+	"stock": 45,
+	"section": "beverages",
+	"image": "wine.jpg"
+  },
+  {
+	"id": 40,
+	"productName": "Cola Drink 2L",
+	"price": 1.85,
+	"stock": 100,
+	"section": "beverages",
+	"image": "cola.jpg"
+  },
+  {
+	"id": 41,
+	"productName": "Estrella Galicia",
+	"price": 4.2,
+	"stock": 21,
+	"section": "beverages",
+	"image": "beer.jpg"
+  },
+  {
+	"id": 42,
+	"productName": "Orange Juice",
+	"price": 1.75,
+	"stock": 0,
+	"section": "beverages",
+	"image": "juice.jpg"
+  }
+]

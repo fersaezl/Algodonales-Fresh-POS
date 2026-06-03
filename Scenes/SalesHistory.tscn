@@ -1,0 +1,531 @@
+[gd_scene format=3 uid="uid://b7vbc4mrctlxp"]
+
+[ext_resource type="Script" uid="uid://kincftvegcyq" path="res://Scripts/sales_history.gd" id="1_4amme"]
+[ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_akoho"]
+[ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="3_4amme"]
+[ext_resource type="FontFile" uid="uid://cc3tj3ji6fn2c" path="res://Assets/Fonts/Helvetica.ttf" id="4_akoho"]
+[ext_resource type="PackedScene" uid="uid://cg3rjmr1j08n0" path="res://Scenes/SalesHList.tscn" id="4_ol7no"]
+[ext_resource type="PackedScene" uid="uid://bxbbvtnvjv1d2" path="res://Scenes/Summary.tscn" id="5_akoho"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68xj4"]
+bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b30p1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cic5l"]
+bg_color = Color(0.14901961, 0.6, 0.14901961, 0.3019608)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62unc"]
+bg_color = Color(1, 1, 1, 0.101960786)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74tx3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b30p1"]
+content_margin_left = 10.0
+content_margin_top = 6.0
+content_margin_right = 10.0
+content_margin_bottom = 6.0
+bg_color = Color(0.972549, 0.9882353, 0.972549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol7no"]
+bg_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akoho"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8352941, 0.88235295, 0.8352941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4amme"]
+bg_color = Color(0.9077744, 0.9608243, 0.9080243, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_74tx3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvcdn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ni1tk"]
+bg_color = Color(0.92156863, 0.96862745, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_top = 10.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gh28p"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
+bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
+
+[node name="SalesHistory" type="Control" unique_id=1141181362]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4amme")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1245416890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.92941177, 0.9529412, 0.92941177, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=867928888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="MainLayout" type="VBoxContainer" parent="MarginContainer" unique_id=1331561640]
+layout_mode = 2
+
+[node name="TopBar" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1555328487]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_68xj4")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/TopBar" unique_id=719228339]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer" unique_id=169149996]
+layout_mode = 2
+
+[node name="LeftSection" type="HBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=1168630790]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Logo" type="TextureRect" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/LeftSection" unique_id=933560587]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_akoho")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="AppTitle" type="Label" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/LeftSection" unique_id=1742864751]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Algodonales Fresh POS"
+vertical_alignment = 1
+
+[node name="MenuSection" type="HBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=1716196786]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Sales" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection" unique_id=1206424461]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b30p1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cic5l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_62unc")
+text = "Sales"
+
+[node name="History" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection" unique_id=1483114598]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b30p1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cic5l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_62unc")
+text = "Sales History"
+
+[node name="Stock" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection" unique_id=1354346804]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b30p1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cic5l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_62unc")
+text = "Stock"
+
+[node name="RightSection" type="VBoxContainer" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=1341388016]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="UserName" type="Label" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection" unique_id=2009260860]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="DateTime" type="Label" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection" unique_id=1495076580]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout" unique_id=419936859]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Content" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer" unique_id=1609184870]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="ProductsPanel" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content" unique_id=681048521]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_74tx3")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel" unique_id=1466560855]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer" unique_id=1660458750]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ProductsLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=651650069]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 18
+text = "Filters"
+
+[node name="DateRange" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=532265242]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "Date range"
+
+[node name="SearchBar" type="LineEdit" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1848917538]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_b30p1")
+placeholder_text = "Pick a date"
+
+[node name="SearchLbl" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1577945179]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "Search"
+
+[node name="SearchBar2" type="LineEdit" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=777579603]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_b30p1")
+placeholder_text = "Search invoice, cashier..."
+
+[node name="PaymentLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=238178153]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "Payment method"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1553145692]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=553325849]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_ol7no")
+text = "Apply filters"
+
+[node name="Button2" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=599196255]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_akoho")
+text = "Clear"
+
+[node name="SummaryPanel" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1119211475]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4amme")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel" unique_id=844296466]
+layout_mode = 2
+theme_override_constants/separation = 27
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer" unique_id=162270530]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+text = "Summary"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer" unique_id=100250428]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer" unique_id=31566764]
+layout_mode = 2
+theme_override_constants/v_separation = 14
+columns = 2
+
+[node name="TotalSales" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1019785635]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "Total Sales"
+
+[node name="SalesAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1270772242]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "0.00 €"
+
+[node name="TotalOrders" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1936213261]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "Total Orders"
+
+[node name="OrdersAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1237342464]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "0"
+
+[node name="AverageTicket" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1940912835]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "Average Ticket"
+
+[node name="TicketAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1036832574]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "0.00 €"
+
+[node name="TotalSales2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1401544742]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "Total Items Sold"
+
+[node name="ItemsSold" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=2127016291]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 13
+text = "0"
+
+[node name="SalesPanel" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content" unique_id=1442308960]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_74tx3")
+
+[node name="Cart" parent="MarginContainer/MainLayout/MarginContainer/Content/SalesPanel" unique_id=453017138 instance=ExtResource("4_ol7no")]
+layout_mode = 2
+
+[node name="PaymentPanel" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content" unique_id=1274945131]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kvcdn")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel" unique_id=1372395618]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer" unique_id=155812337]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="PaymentLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1440480209]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 18
+text = "Sale details"
+
+[node name="SaleDetails" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1746955237]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ni1tk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails" unique_id=332044857]
+layout_mode = 2
+
+[node name="Invoice" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=1593261141]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("4_akoho")
+theme_override_font_sizes/font_size = 13
+text = "Invoice"
+
+[node name="NumberInvoice" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=612152552]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_font_sizes/font_size = 20
+text = "INV-000000"
+
+[node name="Date" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=644052885]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("4_akoho")
+theme_override_font_sizes/font_size = 13
+text = "Date"
+
+[node name="DateLbl" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=1290356039]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=176885964]
+layout_mode = 2
+columns = 2
+
+[node name="CashierLbl" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer/GridContainer" unique_id=1217866217]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("4_akoho")
+theme_override_font_sizes/font_size = 13
+text = "Cashier"
+
+[node name="PaymentMethodLbl" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer/GridContainer" unique_id=1728784405]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("4_akoho")
+theme_override_font_sizes/font_size = 13
+text = "Payment method"
+
+[node name="Username" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer/GridContainer" unique_id=867375217]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+
+[node name="CardCash" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer/GridContainer" unique_id=119389857]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+
+[node name="Summary" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1396762082 instance=ExtResource("5_akoho")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1949639821]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("3_4amme")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gh28p")
+text = "Print Invoice"
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
+
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Sales" to="." method="_on_sales_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/History" to="." method="_on_history_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Stock" to="." method="_on_stock_pressed"]
+[connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]

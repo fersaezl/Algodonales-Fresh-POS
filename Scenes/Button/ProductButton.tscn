@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://cyhcop6cjl3lr"]
+
+[ext_resource type="Script" uid="uid://52b6fxfjnu2s" path="res://Scripts/Button/product_button.gd" id="1_yybl5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_la7tw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8980392, 0.92941177, 0.8980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_la7tw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exogh"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="PanelContainer" type="PanelContainer" unique_id=121302424]
+custom_minimum_size = Vector2(110, 100)
+offset_right = 110.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_la7tw")
+script = ExtResource("1_yybl5")
+button_text = null
+price_text = null
+icon_size = null
+
+[node name="Button" type="Button" parent="." unique_id=802101066]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_la7tw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_exogh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button" unique_id=114170497]
+custom_minimum_size = Vector2(110, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Button/VBoxContainer" unique_id=1957798318]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Button/VBoxContainer" unique_id=1016145403]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Button/VBoxContainer" unique_id=1163722464]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,42 @@
+[
+	{
+	"id": "all",
+	"name": "All",
+	"image": "All.png"
+  },
+  {
+	"id": "fruit",
+	"name": "Fruit",
+	"image": "Fruits.png"
+  },
+  {
+	"id": "vegetables",
+	"name": "Vegetables",
+	"image": "Vegetables.png"
+  },
+  {
+	"id": "meat",
+	"name": "Meat",
+	"image": "Meat.png"
+  },
+  {
+	"id": "fish",
+	"name": "Fish",
+	"image": "Fish.png"
+  },
+  {
+	"id": "dairy",
+	"name": "Dairy",
+	"image": "Dairy.png"
+  },
+  {
+	"id": "pantry",
+	"name": "Pantry",
+	"image": "Pantry.png"
+  },
+  {
+	"id": "beverages",
+	"name": "Beverages",
+	"image": "Beverages.png"
+  }
+]
