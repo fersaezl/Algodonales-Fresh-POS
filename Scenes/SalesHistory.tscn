@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_akoho"]
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="3_4amme"]
 [ext_resource type="FontFile" uid="uid://cc3tj3ji6fn2c" path="res://Assets/Fonts/Helvetica.ttf" id="4_akoho"]
-[ext_resource type="PackedScene" uid="uid://b54xa6d3dtu6v" path="res://Scenes/SalesHList.tscn" id="4_ol7no"]
+[ext_resource type="PackedScene" uid="uid://cg3rjmr1j08n0" path="res://Scenes/SalesHList.tscn" id="4_ol7no"]
 [ext_resource type="PackedScene" uid="uid://bxbbvtnvjv1d2" path="res://Scenes/Summary.tscn" id="5_akoho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68xj4"]
