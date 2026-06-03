@@ -1,0 +1,72 @@
+[
+	{
+		"cart": {
+			"productos": [
+				{
+					"cantidad": 2.0,
+					"id": 16.0,
+					"precio": 1.5,
+					"productoName": "Refresco de Cola"
+				}
+			]
+		},
+		"sale_id": 11.0,
+		"user": "pepe"
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 2.0,
+		"user": ""
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 3.0,
+		"user": ""
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 4.0,
+		"user": ""
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 5.0,
+		"user": ""
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 6.0,
+		"user": ""
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 7.0,
+		"user": ""
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 8.0,
+		"user": ""
+	},
+	{
+		"cart": {
+
+		},
+		"sale_id": 9,
+		"user": ""
+	}
+]

@@ -138,3 +138,11 @@ func _on_history_pressed() -> void:
 func _on_stock_pressed() -> void:
 	_set_active_tab(btn_sales)
 	get_tree().change_scene_to_file("res://Scenes/Stock.tscn")
+
+
+func _on_buy_pressed() -> void:
+	ProductManager.save_sale()
+
+
+func _on_btn_save_sale_pressed() -> void:
+	ProductManager.save_sale()

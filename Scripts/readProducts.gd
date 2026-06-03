@@ -9,7 +9,8 @@ var current_user: String = ""
 func _ready():
 	products=readProducts()
 	sections=readSections()
-
+	save_sale()
+	print(readHistory())
 func readProducts():
 	var file = FileAccess.open("res://Data/products.json", FileAccess.READ)
 	var content = file.get_as_text()
@@ -21,6 +22,12 @@ func readSections():
 	var content = file.get_as_text()
 	var parseContent=JSON.parse_string(content)
 	return parseContent
+	
+func readHistory():
+	var file = FileAccess.open("res://Data/historysales.json", FileAccess.READ)
+	var content = file.get_as_text()
+	var parseContent=JSON.parse_string(content)
+	return parseContent	
 	
 func productsSection(section):
 	productsFiltered.clear()
@@ -41,3 +48,19 @@ func searchProductByid(id):
 	for pro in products:
 		if(pro.id==id):
 			return pro
+func save_sale():
+	if (cart==null):
+		return
+	var history = readHistory()
+	var file_read = FileAccess.open("res://Data/historysales.json", FileAccess.READ)
+	var next_id = history.size() + 1
+	var new_sale={
+		"sale_id": next_id,
+		"user": current_user,
+		"cart": cart
+	}
+	history.append(new_sale)
+	
+	var file = FileAccess.open("res://Data/historysales.json", FileAccess.WRITE)
+	file.store_string(JSON.stringify(history, "\t"))
+	file.close()

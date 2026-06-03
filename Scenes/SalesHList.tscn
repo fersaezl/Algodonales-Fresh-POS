@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cg3rjmr1j08n0"]
+[gd_scene format=3 uid="uid://b54xa6d3dtu6v"]
 
 [ext_resource type="Script" uid="uid://b4o2qay5etc2p" path="res://Scenes/cart2.gd" id="1_alg5q"]
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="2_lqyso"]
