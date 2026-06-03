@@ -180,6 +180,7 @@ func _on_plus(prod_id) -> void:
 
 func _on_clear_btn_pressed() -> void:
 	ProductManager.cart.clear()
+	discount = 0.0
 	for child in items_list.get_children():
 		child.queue_free()
 	%SubtotalAmount.text = "0.00 €"
@@ -188,3 +189,11 @@ func _on_clear_btn_pressed() -> void:
 	%TaxAmount.text = "0.00 €"
 	%Badge.text       = "0"
 	total_changed.emit(0.0)
+
+func _on_pay_button_pressed():
+	ProductManager.discount      = discount
+	ProductManager.tax_rate      = tax_rate
+	ProductManager.ticket_number += 1
+	ProductManager.save_sale()
+
+	get_tree().change_scene_to_file("res://scenes/ticket.tscn")

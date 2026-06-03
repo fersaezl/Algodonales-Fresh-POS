@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2y28mv2rdv7a"]
 
-[ext_resource type="Script" uid="uid://depeafxr57b1k" path="res://Scripts/ticket.gd" id="1_vvks3"]
+[ext_resource type="Script" uid="uid://0sg6tvlwuqga" path="res://Scripts/ticket.gd" id="1_vvks3"]
 [ext_resource type="FontFile" uid="uid://cc6otkftwd1po" path="res://Assets/Fonts/COURBD.TTF" id="2_qpexw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pprrh"]
