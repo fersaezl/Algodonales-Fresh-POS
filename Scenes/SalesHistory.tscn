@@ -456,6 +456,7 @@ theme_override_font_sizes/font_size = 13
 text = "Invoice"
 
 [node name="NumberInvoice" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=612152552]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_fonts/font = ExtResource("3_4amme")
@@ -470,7 +471,9 @@ theme_override_font_sizes/font_size = 13
 text = "Date"
 
 [node name="DateLbl" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=1290356039]
+unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_4amme")
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer" unique_id=176885964]
@@ -494,11 +497,13 @@ theme_override_font_sizes/font_size = 13
 text = "Payment method"
 
 [node name="Username" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer/GridContainer" unique_id=867375217]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_fonts/font = ExtResource("3_4amme")
 
 [node name="CardCash" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/SaleDetails/VBoxContainer/GridContainer" unique_id=119389857]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_fonts/font = ExtResource("3_4amme")

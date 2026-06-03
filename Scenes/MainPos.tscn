@@ -539,5 +539,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Stock" to="." method="_on_stock_pressed"]
 [connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]
 [connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/PaidInput" to="." method="_on_paid_input_text_changed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCash" to="." method="_on_btn_cash_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCard" to="." method="_on_btn_card_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnSaveSale" to="." method="_on_btn_save_sale_pressed"]

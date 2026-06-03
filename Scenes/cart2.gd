@@ -194,6 +194,6 @@ func _on_pay_button_pressed():
 	ProductManager.discount      = discount
 	ProductManager.tax_rate      = tax_rate
 	ProductManager.ticket_number += 1
-	ProductManager.save_sale()
+	ProductManager.save_sale("")
 
 	get_tree().change_scene_to_file("res://scenes/ticket.tscn")

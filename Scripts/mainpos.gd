@@ -16,8 +16,13 @@ const IMAGES = "res://Assets/productImages/"
 @onready var paid_input = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/PaidInput
 @onready var change_amount = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/ChangeAmount
 @onready var payment_total = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/TotalBlock/VBoxContainer/TotalAmount
+@onready var btn_cash = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCash
+@onready var btn_card = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCard
+@onready var btn_buy_now = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Buy
+@onready var btn_save_sale = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnSaveSale
 
 var first_btn
+var paymentSelect=""
 
 func _ready() -> void:
 	load_categories()
@@ -27,6 +32,7 @@ func _ready() -> void:
 	_set_active_tab(btn_sales)
 	payment_total.text = "0.00 €"
 	cartTSCN.total_changed.connect(_on_cart_total_changed)
+	disableButtons()
 
 func load_categories() -> void:
 	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
@@ -47,7 +53,6 @@ func load_categories() -> void:
 
 var current_btn = null
 var current_total: float = 0.0
-var payment_method: String = "cash"
 
 func load_products(section_id: String, btn = null) -> void:
 	if current_btn:
@@ -126,7 +131,10 @@ func _on_cart_total_changed(amount: float) -> void:
 	current_total = amount
 	payment_total.text = "%.2f €" % amount
 	_update_change()
-
+func disableButtons():
+	var disable=(paymentSelect=="")
+	btn_buy_now.disabled=disable
+	
 func _on_sales_pressed() -> void:
 	_set_active_tab(btn_sales)
 	get_tree().change_scene_to_file("res://Scenes/MainPos.tscn")
@@ -141,8 +149,19 @@ func _on_stock_pressed() -> void:
 
 
 func _on_buy_pressed() -> void:
-	ProductManager.save_sale()
+	ProductManager.save_sale(paymentSelect)
+	ProductManager.cart.clear()
 
 
 func _on_btn_save_sale_pressed() -> void:
-	ProductManager.save_sale()
+	ProductManager.save_sale("SAVE")
+
+
+func _on_btn_cash_pressed() -> void:
+	paymentSelect="Cash"
+	disableButtons()
+
+
+func _on_btn_card_pressed() -> void:
+	paymentSelect="Card"
+	disableButtons()
