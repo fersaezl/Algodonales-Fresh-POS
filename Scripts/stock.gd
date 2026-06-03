@@ -15,6 +15,11 @@ const IMAGES = "res://Assets/productImages/"
 @onready var datetime_label = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection/DateTime
 @onready var products_list = $MarginContainer/MainLayout/MarginContainer/Content/ProductContainer/MarginContainer/VBoxContainer/ScrollContainer/ProductsList
 
+@onready var total_products_label = $MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/MarginContainer/VBoxContainer/TotalProductsLabel
+@onready var low_stock_label = $MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/MarginContainer/VBoxContainer/LowStockProductsLabel
+@onready var out_of_stock_label = $MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/MarginContainer/VBoxContainer/NoStockProductsLabel
+@onready var inventory_value_label = $MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/InventoryValue/MarginContainer/VBoxContainer/InventoryLabel
+
 var current_btn = null
 var current_stock_filter: String = "all"
 var current_section_id: String = "all"
@@ -23,6 +28,9 @@ func _ready() -> void:
 	load_categories()
 	username_label.text = ProductManager.current_user
 	_set_active_tab(btn_stock)
+	
+	_update_stock_counters()
+	
 	var first = categories_grid.get_child(0)
 	_on_category_selected("all", first)
 
@@ -57,7 +65,6 @@ func _on_category_selected(section_id: String, btn = null) -> void:
 	current_section_id = section_id
 	_apply_filters()
 
-
 func _set_active_tab(active_btn: Button) -> void:
 	for btn in [btn_sales, btn_history, btn_stock]:
 		btn.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
@@ -69,7 +76,6 @@ func _set_active_tab(active_btn: Button) -> void:
 	active_style.corner_radius_bottom_right = 8
 	active_style.corner_radius_bottom_left = 8
 	active_btn.add_theme_stylebox_override("normal", active_style)
-	
 	
 func show_products(product_list: Array) -> void:
 	for child in products_list.get_children():
@@ -91,7 +97,6 @@ func show_products(product_list: Array) -> void:
 		var row = HBoxContainer.new()
 		row.add_theme_constant_override("separation", 0)
 		
-		# Imagen
 		var img_wrapper = Control.new()
 		img_wrapper.custom_minimum_size = Vector2(35, 35)
 		img_wrapper.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
@@ -106,7 +111,6 @@ func show_products(product_list: Array) -> void:
 		img_wrapper.add_child(img)
 		row.add_child(img_wrapper)
 		
-		# Nombre
 		var name_lbl = Label.new()
 		name_lbl.text = product["productName"]
 		name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -116,7 +120,6 @@ func show_products(product_list: Array) -> void:
 		name_lbl.add_theme_color_override("font_color", FONT_COLOR)
 		row.add_child(name_lbl)
 		
-		# Categoría
 		var cat_lbl = Label.new()
 		cat_lbl.text = _get_section_name(product["section"])
 		cat_lbl.custom_minimum_size   = Vector2(90, 0)
@@ -128,7 +131,6 @@ func show_products(product_list: Array) -> void:
 		cat_lbl.add_theme_color_override("font_color", FONT_COLOR)
 		row.add_child(cat_lbl)
 		
-		# Stock
 		var stock_val = int(product["stock"])
 		var status    = _get_status(stock_val)
 		var stock_lbl = Label.new()
@@ -142,7 +144,6 @@ func show_products(product_list: Array) -> void:
 		stock_lbl.add_theme_color_override("font_color", _get_status_color(status))
 		row.add_child(stock_lbl)
 		
-		# Estado badge
 		var badge_wrap = CenterContainer.new()
 		badge_wrap.custom_minimum_size   = Vector2(90, 0)
 		badge_wrap.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
@@ -150,7 +151,6 @@ func show_products(product_list: Array) -> void:
 		badge_wrap.add_child(_make_status_badge(status))
 		row.add_child(badge_wrap)
 		
-		# Valor
 		var valor_lbl = Label.new()
 		valor_lbl.text = "%.2f €" % (product["price"] * product["stock"])
 		valor_lbl.custom_minimum_size   = Vector2(70, 0)
@@ -247,3 +247,28 @@ func _on_btn_low_pressed() -> void:
 func _on_btn_out_pressed() -> void:
 	current_stock_filter = "out"
 	_apply_filters()
+
+func _update_stock_counters() -> void:
+	var all_products = ProductManager.products
+	
+	var total_count = all_products.size()
+	var low_count = 0
+	var out_count = 0
+	var total_value = 0.0
+	
+	for product in all_products:
+		var stock = int(product["stock"])
+		var price = float(product["price"])
+		
+		total_value += price * stock
+		
+		if stock == 0:
+			out_count += 1
+		elif stock <= 10:
+			low_count += 1
+			
+	total_products_label.text = str(total_count)
+	low_stock_label.text = str(low_count)
+	out_of_stock_label.text = str(out_count)
+	
+	inventory_value_label.text = "%.2f €" % total_value

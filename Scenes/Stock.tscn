@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bo12t0nb087i3" path="res://Assets/Icons/paquete-o-empaquetar.png" id="5_qjxx2"]
 [ext_resource type="Texture2D" uid="uid://bs3iu6hu5fydx" path="res://Assets/Icons/advertencia.png" id="6_vooxp"]
 [ext_resource type="Texture2D" uid="uid://rq8v8306l7ur" path="res://Assets/Icons/prohibido.png" id="7_oxptv"]
+[ext_resource type="Texture2D" uid="uid://cftgawoowdnjj" path="res://Assets/Icons/euro.png" id="8_3rrl5"]
 [ext_resource type="StyleBox" uid="uid://dtqxvf8x7sno3" path="res://Scenes/Button/StockButton.tres" id="8_oxptv"]
 [ext_resource type="Texture2D" uid="uid://cph2xkvlyxevy" path="res://Assets/Icons/lapiz.png" id="9_i2467"]
 
@@ -639,17 +640,21 @@ layout_mode = 2
 texture = ExtResource("5_qjxx2")
 expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts" unique_id=88172406]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts" unique_id=428512735]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/MarginContainer" unique_id=88172406]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=1941010985]
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/MarginContainer/VBoxContainer" unique_id=1941010985]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "Total products"
 
-[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/VBoxContainer" unique_id=756081669]
+[node name="TotalProductsLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TotalProducts/MarginContainer/VBoxContainer" unique_id=756081669]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
@@ -663,17 +668,21 @@ layout_mode = 2
 texture = ExtResource("6_vooxp")
 expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock" unique_id=1681459387]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock" unique_id=2055397820]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/MarginContainer" unique_id=1681459387]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1761909594]
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/MarginContainer/VBoxContainer" unique_id=1761909594]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "Low stock"
 
-[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/VBoxContainer" unique_id=1055513625]
+[node name="LowStockProductsLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LowStock/MarginContainer/VBoxContainer" unique_id=1055513625]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
@@ -686,17 +695,48 @@ layout_mode = 2
 texture = ExtResource("7_oxptv")
 expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock" unique_id=539543339]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock" unique_id=1940375629]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/MarginContainer" unique_id=539543339]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=851963850]
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/MarginContainer/VBoxContainer" unique_id=851963850]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
 text = "Out of stock"
 
-[node name="Label2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/VBoxContainer" unique_id=698991970]
+[node name="NoStockProductsLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/MarginContainer/VBoxContainer" unique_id=698991970]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="InventoryValue" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=378135388]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/InventoryValue" unique_id=1014366026]
+layout_mode = 2
+texture = ExtResource("8_3rrl5")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/InventoryValue" unique_id=497409424]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/InventoryValue/MarginContainer" unique_id=2049053170]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/InventoryValue/MarginContainer/VBoxContainer" unique_id=1030097987]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Inventory value"
+
+[node name="InventoryLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/InventoryValue/MarginContainer/VBoxContainer" unique_id=897152865]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 14
