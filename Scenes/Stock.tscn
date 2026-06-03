@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://5odd1jxr2xmn" path="res://Scripts/stock.gd" id="1_yaj15"]
 [ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_qjxx2"]
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="3_6fb2v"]
-[ext_resource type="StyleBox" uid="uid://ybnnvvndfs1f" path="res://Scenes/Button/new_style_box_flat.tres" id="4_cpvl2"]
+[ext_resource type="ButtonGroup" uid="uid://bighsalt4tdye" path="res://Assets/Buttons/new_button_group.tres" id="4_i2467"]
 [ext_resource type="Texture2D" uid="uid://bo12t0nb087i3" path="res://Assets/Icons/paquete-o-empaquetar.png" id="5_qjxx2"]
 [ext_resource type="Texture2D" uid="uid://bs3iu6hu5fydx" path="res://Assets/Icons/advertencia.png" id="6_vooxp"]
 [ext_resource type="Texture2D" uid="uid://rq8v8306l7ur" path="res://Assets/Icons/prohibido.png" id="7_oxptv"]
@@ -38,7 +38,181 @@ corner_radius_bottom_left = 16
 shadow_color = Color(0, 0, 0, 0.11764706)
 shadow_size = 4
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_yaj15"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rrl5"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f3ek"]
+bg_color = Color(0, 0.26666668, 0.8235294, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcjab"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygs6a"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcv2k"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0.8, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1h3e"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15gxq"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjhiu"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5m7p"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5fho2"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qphvg"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0f0hl"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvcdn"]
 bg_color = Color(1, 1, 1, 1)
@@ -228,152 +402,112 @@ columns = 3
 layout_mode = 2
 theme_override_constants/margin_top = 20
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=179479403]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=268567390]
 layout_mode = 2
 
-[node name="CategoryLabel2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2" unique_id=1907570218]
+[node name="CategoryLabel2" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2" unique_id=89646286]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_fonts/font = ExtResource("3_6fb2v")
 theme_override_font_sizes/font_size = 18
 text = "Stock filter"
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2" unique_id=573936579]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2" unique_id=440235329]
 layout_mode = 2
 theme_override_constants/margin_left = 7
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer" unique_id=770007643]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer" unique_id=1027414044]
 layout_mode = 2
 
-[node name="CheckBox" type="CheckBox" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=721217347]
+[node name="All" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1069134711]
 layout_direction = 3
 layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/All" unique_id=152030020]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rrl5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5f3ek")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcjab")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/All" unique_id=2060351711]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("4_cpvl2")
-theme_override_styles/normal_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/pressed = ExtResource("4_cpvl2")
-theme_override_styles/pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover = ExtResource("4_cpvl2")
-theme_override_styles/hover_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/disabled = ExtResource("4_cpvl2")
-theme_override_styles/disabled_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/focus = ExtResource("4_cpvl2")
-theme_override_colors/checkbox_checked_color = Color(0, 0, 0, 1)
-theme_override_colors/checkbox_unchecked_color = Color(0, 0, 0, 1)
-button_group = SubResource("ButtonGroup_yaj15")
 text = "All products"
-alignment = 2
+vertical_alignment = 1
 
-[node name="CheckBox4" type="CheckBox" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=173918576]
+[node name="High" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=812905618]
 layout_direction = 3
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
-theme_override_styles/normal = ExtResource("4_cpvl2")
-theme_override_styles/normal_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/pressed = ExtResource("4_cpvl2")
-theme_override_styles/pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover = ExtResource("4_cpvl2")
-theme_override_styles/hover_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/disabled = ExtResource("4_cpvl2")
-theme_override_styles/disabled_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/focus = ExtResource("4_cpvl2")
-theme_override_colors/checkbox_checked_color = Color(0, 0.8, 0, 1)
-theme_override_colors/checkbox_unchecked_color = Color(0, 0.8, 0, 1)
-button_group = SubResource("ButtonGroup_yaj15")
-text = "High stock
-"
-alignment = 2
+alignment = 1
 
-[node name="CheckBox2" type="CheckBox" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=846626577]
-layout_direction = 3
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/High" unique_id=511798606]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygs6a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mcv2k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s1h3e")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/High" unique_id=1229327143]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = ExtResource("4_cpvl2")
-theme_override_styles/normal_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/pressed = ExtResource("4_cpvl2")
-theme_override_styles/pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover = ExtResource("4_cpvl2")
-theme_override_styles/hover_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/disabled = ExtResource("4_cpvl2")
-theme_override_styles/disabled_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/focus = ExtResource("4_cpvl2")
-theme_override_colors/checkbox_checked_color = Color(1, 1, 0, 1)
-theme_override_colors/checkbox_unchecked_color = Color(1, 1, 0, 1)
-button_group = SubResource("ButtonGroup_yaj15")
-text = "Low stock
-"
-alignment = 2
+text = "High Stock"
+vertical_alignment = 1
 
-[node name="CheckBox3" type="CheckBox" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1061158316]
+[node name="Low" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1781781144]
 layout_direction = 3
 layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Low" unique_id=898455965]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_15gxq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjhiu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f5m7p")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Low" unique_id=750034946]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("4_cpvl2")
-theme_override_styles/normal_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/pressed = ExtResource("4_cpvl2")
-theme_override_styles/pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover = ExtResource("4_cpvl2")
-theme_override_styles/hover_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed = ExtResource("4_cpvl2")
-theme_override_styles/hover_pressed_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/disabled = ExtResource("4_cpvl2")
-theme_override_styles/disabled_mirrored = ExtResource("4_cpvl2")
-theme_override_styles/focus = ExtResource("4_cpvl2")
-theme_override_colors/checkbox_checked_color = Color(1, 0, 0, 1)
-theme_override_colors/checkbox_unchecked_color = Color(1, 0, 0, 1)
-button_group = SubResource("ButtonGroup_yaj15")
-text = "Out of stock"
-alignment = 2
+text = "Low Stock"
+vertical_alignment = 1
+
+[node name="Out" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1702740986]
+layout_direction = 3
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Out" unique_id=1124792012]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_5fho2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qphvg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0f0hl")
+toggle_mode = true
+button_group = ExtResource("4_i2467")
+
+[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer2/MarginContainer/VBoxContainer/Out" unique_id=908800620]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Out of Stock"
+vertical_alignment = 1
 
 [node name="ProductContainer" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content" unique_id=544394706]
 custom_minimum_size = Vector2(500, 0)
@@ -427,6 +561,7 @@ theme_override_constants/margin_top = 9
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer" unique_id=2113957017]
 layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="TotalProducts" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1996386804]
 layout_mode = 2
@@ -510,6 +645,10 @@ theme_override_styles/panel = ExtResource("8_oxptv")
 
 [node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=980972666]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/icon_max_width = 20
+theme_override_fonts/font = ExtResource("3_6fb2v")
+theme_override_icons/icon = ExtResource("9_i2467")
 theme_override_styles/normal = ExtResource("8_oxptv")
 theme_override_styles/normal_mirrored = ExtResource("8_oxptv")
 theme_override_styles/pressed = ExtResource("8_oxptv")
@@ -521,23 +660,7 @@ theme_override_styles/hover_pressed_mirrored = ExtResource("8_oxptv")
 theme_override_styles/disabled = ExtResource("8_oxptv")
 theme_override_styles/disabled_mirrored = ExtResource("8_oxptv")
 theme_override_styles/focus = ExtResource("8_oxptv")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/Button" unique_id=872875384]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/Button/HBoxContainer" unique_id=2074955142]
-layout_mode = 2
-texture = ExtResource("9_i2467")
-expand_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/Button/HBoxContainer" unique_id=2121522791]
-layout_mode = 2
-text = "Ajuste de inventario"
+text = "Stock management"
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
 custom_minimum_size = Vector2(0, 40)
