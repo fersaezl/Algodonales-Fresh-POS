@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bs3iu6hu5fydx" path="res://Assets/Icons/advertencia.png" id="6_vooxp"]
 [ext_resource type="Texture2D" uid="uid://rq8v8306l7ur" path="res://Assets/Icons/prohibido.png" id="7_oxptv"]
 [ext_resource type="Texture2D" uid="uid://cftgawoowdnjj" path="res://Assets/Icons/euro.png" id="8_3rrl5"]
-[ext_resource type="StyleBox" uid="uid://dtqxvf8x7sno3" path="res://Scenes/Button/StockButton.tres" id="8_oxptv"]
 [ext_resource type="Texture2D" uid="uid://cph2xkvlyxevy" path="res://Assets/Icons/lapiz.png" id="9_i2467"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpvl2"]
@@ -230,16 +229,28 @@ border_width_top = 1
 border_width_bottom = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2467"]
-bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6jeq"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6wxj"]
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.14901961, 0.6, 0.14901961, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
 bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
@@ -748,25 +759,20 @@ theme_override_constants/margin_top = 20
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=454143004]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
-theme_override_styles/panel = ExtResource("8_oxptv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_i2467")
 
 [node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=980972666]
 layout_mode = 2
-size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/icon_max_width = 20
 theme_override_fonts/font = ExtResource("3_6fb2v")
 theme_override_icons/icon = ExtResource("9_i2467")
-theme_override_styles/normal = ExtResource("8_oxptv")
-theme_override_styles/normal_mirrored = ExtResource("8_oxptv")
-theme_override_styles/pressed = ExtResource("8_oxptv")
-theme_override_styles/pressed_mirrored = ExtResource("8_oxptv")
-theme_override_styles/hover = SubResource("StyleBoxFlat_i2467")
-theme_override_styles/hover_mirrored = ExtResource("8_oxptv")
-theme_override_styles/hover_pressed = ExtResource("8_oxptv")
-theme_override_styles/hover_pressed_mirrored = ExtResource("8_oxptv")
-theme_override_styles/disabled = ExtResource("8_oxptv")
-theme_override_styles/disabled_mirrored = ExtResource("8_oxptv")
-theme_override_styles/focus = ExtResource("8_oxptv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h6jeq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o6wxj")
 text = "Stock management"
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]

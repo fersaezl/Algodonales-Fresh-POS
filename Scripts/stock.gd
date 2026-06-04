@@ -7,6 +7,8 @@ const BORDER_COLOR = Color(0.8980392, 0.92941177, 0.8980392, 1)
 const ICONS = "res://Assets/productIcon/"
 const IMAGES = "res://Assets/productImages/"
 
+const MODIFY_STOCK_POPUP = preload("res://Scenes/ModifyStockPopup.tscn")
+
 @onready var categories_grid = $MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer/SectionsGrid
 @onready var btn_sales = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Sales
 @onready var btn_history = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/History
@@ -20,6 +22,8 @@ const IMAGES = "res://Assets/productImages/"
 @onready var out_of_stock_label = $MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/NoStock/MarginContainer/VBoxContainer/NoStockProductsLabel
 @onready var inventory_value_label = $MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/InventoryValue/MarginContainer/VBoxContainer/InventoryLabel
 
+@onready var modify_stock_btn = $MarginContainer/MainLayout/MarginContainer/Content/StockPanel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/Button
+
 var current_btn = null
 var current_stock_filter: String = "all"
 var current_section_id: String = "all"
@@ -30,6 +34,8 @@ func _ready() -> void:
 	_set_active_tab(btn_stock)
 	
 	_update_stock_counters()
+	
+	modify_stock_btn.pressed.connect(_on_modify_stock_pressed)
 	
 	var first = categories_grid.get_child(0)
 	_on_category_selected("all", first)
@@ -147,7 +153,7 @@ func show_products(product_list: Array) -> void:
 		var badge_wrap = CenterContainer.new()
 		badge_wrap.custom_minimum_size   = Vector2(90, 0)
 		badge_wrap.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		badge_wrap.size_flags_vertical   = Control.SIZE_SHRINK_CENTER
+		badge_wrap.size_flags_vertical   = CenterContainer.SIZE_SHRINK_CENTER
 		badge_wrap.add_child(_make_status_badge(status))
 		row.add_child(badge_wrap)
 		
@@ -272,3 +278,13 @@ func _update_stock_counters() -> void:
 	out_of_stock_label.text = str(out_count)
 	
 	inventory_value_label.text = "%.2f €" % total_value
+
+func _on_modify_stock_pressed() -> void:
+	var popup_instance = MODIFY_STOCK_POPUP.instantiate()
+	add_child(popup_instance)
+	
+	popup_instance.stock_updated.connect(_on_popup_stock_updated)
+
+func _on_popup_stock_updated():
+	_apply_filters()
+	_update_stock_counters()
