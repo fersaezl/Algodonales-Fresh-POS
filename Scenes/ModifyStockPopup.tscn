@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbl3l86lv5lmg"]
 
-[ext_resource type="Script" uid="uid://dw1r3cocq45au" path="res://Scripts/ModifyStockPopup.gd" id="1_or27r"]
+[ext_resource type="Script" path="res://Scripts/ModifyStockPopup.gd" id="1_or27r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_or27r"]
 content_margin_left = 20.0
@@ -28,7 +28,7 @@ script = ExtResource("1_or27r")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=495929628]
 layout_mode = 2
-color = Color(0, 0, 0, 0.49411765)
+color = Color(0.34781694, 0.34781697, 0.3478169, 0.49411765)
 
 [node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=189176343]
 layout_mode = 1

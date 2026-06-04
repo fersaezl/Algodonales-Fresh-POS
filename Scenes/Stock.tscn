@@ -410,7 +410,6 @@ text = "Category
 "
 
 [node name="SectionsGrid" type="GridContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/CategoryPanel/MarginContainer/VBoxContainer" unique_id=125984713]
-z_index = 10
 layout_mode = 2
 size_flags_horizontal = 3
 columns = 3
