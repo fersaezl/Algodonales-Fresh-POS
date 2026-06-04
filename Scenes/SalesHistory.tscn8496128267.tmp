@@ -277,7 +277,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_b30p1")
-placeholder_text = "Pick a date:03/06/2026"
+placeholder_text = "Pick a date"
 
 [node name="SearchLbl" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=1577945179]
 layout_mode = 2
@@ -291,7 +291,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_b30p1")
-placeholder_text = "Search cashier..."
+placeholder_text = "Search invoice, cashier..."
 
 [node name="PaymentLabel" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer" unique_id=238178153]
 layout_mode = 2
@@ -358,7 +358,6 @@ theme_override_font_sizes/font_size = 13
 text = "Total Sales"
 
 [node name="SalesAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1270772242]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
@@ -391,7 +390,6 @@ theme_override_font_sizes/font_size = 13
 text = "Average Ticket"
 
 [node name="TicketAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=1036832574]
-unique_name_in_owner = true
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
@@ -408,7 +406,6 @@ theme_override_font_sizes/font_size = 13
 text = "Total Items Sold"
 
 [node name="ItemsSold" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SummaryPanel/VBoxContainer/GridContainer" unique_id=2127016291]
-unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_fonts/font = ExtResource("3_4amme")

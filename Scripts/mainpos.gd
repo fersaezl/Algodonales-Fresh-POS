@@ -20,7 +20,7 @@ const IMAGES = "res://Assets/productImages/"
 @onready var btn_card = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCard
 @onready var btn_buy_now = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Buy
 @onready var btn_save_sale = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnSaveSale
-
+@onready var cartItemList = $MarginContainer/MainLayout/MarginContainer/Content/CartPanel/Cart/CenterContainer/MainCard/VBoxContainer/ScrollArea/ItemsList
 var first_btn
 var paymentSelect=""
 
@@ -151,7 +151,8 @@ func _on_stock_pressed() -> void:
 func _on_buy_pressed() -> void:
 	ProductManager.save_sale(paymentSelect)
 	ProductManager.cart.clear()
-
+	for child in cartItemList.get_children():
+		child.queue_free()
 
 func _on_btn_save_sale_pressed() -> void:
 	ProductManager.save_sale("SAVE")

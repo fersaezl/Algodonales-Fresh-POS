@@ -7,8 +7,13 @@ extends Control
 @onready var username_label = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection/UserName
 @onready var datetime_label = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection/DateTime
 @onready var itemListSummary=$MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/ScrollArea/ItemsList
+
+var TotalSpent = 0.0
+var totalSizes=0
+var totalItemsSold=0
+var averageSales
 func _ready():
-	historysales()
+	historysales("","")
 	username_label.text = ProductManager.current_user
 	_set_active_tab(btn_history)
 
@@ -17,13 +22,28 @@ func readHistory():
 	var content = file.get_as_text()
 	var parseContent=JSON.parse_string(content)
 	return parseContent	
-func historysales():
-	var sales=readHistory()
-	if (sales==null):
+func historysales(searchText , secondCondition ):
+	var sales = readHistory()
+
+	if sales == null:
 		return
+
 	for child in items_list.get_children():
 		child.queue_free()
+
 	for sale in sales:
+		var cartData = sale.get("cart")
+
+		if searchText != "":
+			if !str(cartData.get("date")).to_lower().contains(searchText.to_lower()) :
+				continue
+
+		if secondCondition != "":
+			if !str(sale.get("user")).to_lower().contains(secondCondition.to_lower()):
+				continue
+
+		totalSizes=str(sales.size())
+		%OrdersAmount.text=str(sales.size())
 		var row=HBoxContainer.new()
 		row.mouse_filter = Control.MOUSE_FILTER_STOP
 		row.gui_input.connect(func(event): _on_row_clicked(event, sale))
@@ -36,7 +56,10 @@ func historysales():
 			str(cart_data.get("total", 0.0)),
 			str(sale.get("payment_method"))
 		]
-		
+		TotalSpent+=float(cart_data.get("total"))
+		totalItemsSold+=cart_data.get("products").size()
+		%ItemsSold.text = str(int(totalItemsSold))
+		%SalesAmount.text =str(snapped(TotalSpent, 0.01))+"€"
 		for data in dataSale:
 			var label=Label.new()
 			label.text=data
@@ -46,6 +69,8 @@ func historysales():
 			row.add_child(label)
 			
 		items_list.add_child(row)
+		averageSales = TotalSpent / int(totalSizes)
+		%TicketAmount.text = "€" + str(snapped(averageSales, 0.01))
 		
 func _on_row_clicked(event, sale_data):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -107,3 +132,13 @@ func _on_history_pressed() -> void:
 func _on_stock_pressed() -> void:
 	_set_active_tab(btn_stock)
 	get_tree().change_scene_to_file("res://Scenes/Stock.tscn")
+
+
+func _on_button_pressed() -> void:
+	historysales(%SearchBar.text, %SearchBar2.text)
+
+
+func _on_button_2_pressed() -> void:
+	%SearchBar.text=""
+	%SearchBar2.text=""
+	historysales("","")
