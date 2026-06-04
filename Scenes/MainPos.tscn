@@ -159,6 +159,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwt01"]
+content_margin_left = 12.0
 bg_color = Color(0.8039216, 0.9254902, 0.8039216, 1)
 border_width_left = 1
 border_width_top = 1
@@ -661,3 +662,4 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCard" to="." method="_on_btn_card_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnSaveSale" to="." method="_on_btn_save_sale_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnTicket" to="." method="_on_ticket_pressed"]

@@ -4,6 +4,7 @@ const CAT_BTN = preload("res://Scenes/Button/CategoryButton.tscn")
 const PRODUCT_BTN = preload("res://Scenes/Button/ProductButton.tscn")
 const ICONS = "res://Assets/productIcon/"
 const IMAGES = "res://Assets/productImages/"
+const TICKET_SCENE = preload("res://Scenes/Ticket.tscn")
 
 @onready var categories_grid = $MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SectionsScroll/SectionsGrid
 @onready var products_grid = $MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/ProductsScroll/ProductsGrid
@@ -166,3 +167,11 @@ func _on_btn_cash_pressed() -> void:
 func _on_btn_card_pressed() -> void:
 	paymentSelect="Card"
 	disableButtons()
+	
+func _on_ticket_pressed() -> void:
+	var popup = TICKET_SCENE.instantiate()
+	var layer = CanvasLayer.new()
+	layer.layer = 10
+	add_child(layer)
+	layer.add_child(popup)
+	popup.tree_exiting.connect(layer.queue_free)

@@ -67,37 +67,6 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6lk4"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 0, 0, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsb8c"]
-bg_color = Color(1, 0, 0, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpv5j"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.76702464, 3.465414e-06, 0, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pprrh"]
 bg_color = Color(1, 1, 1, 1)
 shadow_color = Color(0, 0, 0, 0.078431375)
@@ -154,20 +123,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pjh58")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7gj4h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_341xs")
 text = "Donwload"
-
-[node name="BtnCancel" type="Button" parent="CenterContainer/Panel" unique_id=1037739102]
-layout_mode = 0
-offset_left = 680.0
-offset_top = 77.0
-offset_right = 740.0
-offset_bottom = 108.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.76862746, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_04xc0")
-theme_override_styles/normal = SubResource("StyleBoxFlat_t6lk4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vsb8c")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jpv5j")
-text = "Cancel"
 
 [node name="MainCard" type="Panel" parent="CenterContainer" unique_id=1600963417]
 custom_minimum_size = Vector2(420, 600)
@@ -302,4 +257,3 @@ horizontal_alignment = 1
 
 [connection signal="pressed" from="CenterContainer/Panel/PrintBtn" to="." method="_on_btn_print_pressed"]
 [connection signal="pressed" from="CenterContainer/Panel/DownloadBtn" to="." method="_on_btn_download_pressed"]
-[connection signal="pressed" from="CenterContainer/Panel/BtnCancel" to="." method="_on_btn_cancel_pressed"]
