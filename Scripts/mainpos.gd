@@ -34,7 +34,8 @@ func _ready() -> void:
 	payment_total.text = "0.00 €"
 	cartTSCN.total_changed.connect(_on_cart_total_changed)
 	disableButtons()
-
+	if ProductManager.cart!=null:
+		loadCart()
 func load_categories() -> void:
 	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
 	if file == null:
@@ -148,10 +149,16 @@ func _on_stock_pressed() -> void:
 	_set_active_tab(btn_sales)
 	get_tree().change_scene_to_file("res://Scenes/Stock.tscn")
 
-
+func loadCart():
+	var cart = ProductManager.cart
+	if cart != null and not cart.is_empty():
+		var product = ProductManager.searchProductByid(int( cart.keys()[0]))
+		cartTSCN.add_product(product, cart)
+				
 func _on_buy_pressed() -> void:
 	ProductManager.save_sale(paymentSelect)
 	ProductManager.cart.clear()
+	cartTSCN.add_product(null, {})
 	for child in cartItemList.get_children():
 		child.queue_free()
 

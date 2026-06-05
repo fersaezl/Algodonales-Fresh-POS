@@ -44,28 +44,219 @@
 			"date": "03/06/2026",
 			"products": [
 				{
-					"id": 3,
+					"id": 3.0,
 					"price": 3.2,
 					"productName": "Sierra Tomato",
-					"quantity": 1
+					"quantity": 1.0
 				},
 				{
-					"id": 6,
+					"id": 6.0,
 					"price": 2.45,
 					"productName": "Sweet Mandarin",
-					"quantity": 1
+					"quantity": 1.0
 				},
 				{
-					"id": 5,
+					"id": 5.0,
 					"price": 2.0,
 					"productName": "Orange",
-					"quantity": 1
+					"quantity": 1.0
 				}
 			],
 			"total": 9.25
 		},
 		"payment_method": "Cash",
-		"sale_id": 3,
+		"sale_id": 3.0,
 		"user": "pepe"
+	},
+	{
+		"cart": {
+			"date": "03/06/2026",
+			"products": [
+				{
+					"id": 2.0,
+					"price": 1.99,
+					"productName": "Banana",
+					"quantity": 1.0
+				},
+				{
+					"id": 5.0,
+					"price": 2.0,
+					"productName": "Orange",
+					"quantity": 3.0
+				},
+				{
+					"id": 6.0,
+					"price": 2.45,
+					"productName": "Sweet Mandarin",
+					"quantity": 1.0
+				}
+			],
+			"total": 12.63
+		},
+		"payment_method": "SAVE",
+		"sale_id": 4.0,
+		"user": "Fernando"
+	},
+	{
+		"cart": {
+			"date": "03/06/2026",
+			"products": [
+				{
+					"id": 2.0,
+					"price": 1.99,
+					"productName": "Banana",
+					"quantity": 1.0
+				},
+				{
+					"id": 3.0,
+					"price": 3.2,
+					"productName": "Sierra Tomato",
+					"quantity": 1.0
+				}
+			],
+			"total": 6.28
+		},
+		"payment_method": "Card",
+		"sale_id": 5.0,
+		"user": ""
+	},
+	{
+		"cart": {
+			"date": "03/06/2026",
+			"products": [
+				{
+					"id": 6.0,
+					"price": 2.45,
+					"productName": "Sweet Mandarin",
+					"quantity": 1.0
+				},
+				{
+					"id": 5.0,
+					"price": 2.0,
+					"productName": "Orange",
+					"quantity": 1.0
+				}
+			],
+			"total": 5.38
+		},
+		"payment_method": "SAVE",
+		"sale_id": 6.0,
+		"user": ""
+	},
+	{
+		"cart": {
+			"date": "03/06/2026",
+			"products": [
+				{
+					"id": 3.0,
+					"price": 3.2,
+					"productName": "Sierra Tomato",
+					"quantity": 1.0
+				},
+				{
+					"id": 6.0,
+					"price": 2.45,
+					"productName": "Sweet Mandarin",
+					"quantity": 1.0
+				},
+				{
+					"id": 5.0,
+					"price": 2.0,
+					"productName": "Orange",
+					"quantity": 1.0
+				},
+				{
+					"id": 8.0,
+					"price": 3.1,
+					"productName": "Green Kiwi",
+					"quantity": 1.0
+				},
+				{
+					"id": 9.0,
+					"price": 1.75,
+					"productName": "Courgette",
+					"quantity": 1.0
+				}
+			],
+			"total": 15.12
+		},
+		"payment_method": "SAVE",
+		"sale_id": 7.0,
+		"user": ""
+	},
+	{
+		"cart": {
+			"date": "05/06/2026",
+			"products": [
+				{
+					"id": 2.0,
+					"price": 1.99,
+					"productName": "Banana",
+					"quantity": 1.0
+				},
+				{
+					"id": 5.0,
+					"price": 2.0,
+					"productName": "Orange",
+					"quantity": 5.0
+				},
+				{
+					"id": 6.0,
+					"price": 2.45,
+					"productName": "Sweet Mandarin",
+					"quantity": 1.0
+				}
+			],
+			"total": 17.47
+		},
+		"payment_method": "Cash",
+		"sale_id": 8.0,
+		"user": ""
+	},
+	{
+		"cart": {
+			"date": "05/06/2026",
+			"products": [
+				{
+					"id": 3.0,
+					"price": 3.2,
+					"productName": "Sierra Tomato",
+					"quantity": 2.0
+				},
+				{
+					"id": 6.0,
+					"price": 2.45,
+					"productName": "Sweet Mandarin",
+					"quantity": 3.0
+				}
+			],
+			"total": 16.63
+		},
+		"payment_method": "Cash",
+		"sale_id": 9.0,
+		"user": ""
+	},
+	{
+		"cart": {
+			"date": "05/06/2026",
+			"products": [
+				{
+					"id": 5,
+					"price": 2.0,
+					"productName": "Orange",
+					"quantity": 2
+				},
+				{
+					"id": 2,
+					"price": 1.99,
+					"productName": "Banana",
+					"quantity": 1
+				}
+			],
+			"total": 7.25
+		},
+		"payment_method": "Cash",
+		"sale_id": 10,
+		"user": ""
 	}
 ]
