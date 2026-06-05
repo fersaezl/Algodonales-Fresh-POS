@@ -124,3 +124,14 @@ func get_subtotal() -> float:
 func get_total() -> float:
 	var sub = get_subtotal()
 	return (sub - discount) * (1.0 + tax_rate)
+	
+func update_stock_after_sale() -> void:
+	for prod_id in cart:
+		var quantity = cart[prod_id]
+		for product in products:
+			if int(product["id"]) == int(prod_id):
+				product["stock"] = int(product["stock"]) - quantity
+				break
+	var file = FileAccess.open("res://Data/products.json", FileAccess.WRITE)
+	file.store_string(JSON.stringify(products, "\t"))
+	file.close()

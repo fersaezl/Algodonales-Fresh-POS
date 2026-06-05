@@ -28,6 +28,18 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yybl5"]
+bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7490196, 0.7490196, 0.7490196, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="PanelContainer" type="PanelContainer" unique_id=121302424]
 custom_minimum_size = Vector2(110, 100)
 offset_right = 110.0
@@ -42,6 +54,7 @@ icon_size = null
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_la7tw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_exogh")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yybl5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Button" unique_id=114170497]
 custom_minimum_size = Vector2(110, 100)
