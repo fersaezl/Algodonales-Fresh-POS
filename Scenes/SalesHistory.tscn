@@ -558,7 +558,7 @@ theme_override_fonts/font = ExtResource("3_4amme")
 [node name="Summary" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1396762082 instance=ExtResource("5_akoho")]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1949639821]
+[node name="PrintBtn" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1949639821]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_vertical = 10
@@ -587,4 +587,5 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
 [connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/HBoxContainer/FiltersButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/HBoxContainer/ClearButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/PrintBtn" to="." method="_on_ticket_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/saleButton" to="." method="_on_sale_button_pressed"]

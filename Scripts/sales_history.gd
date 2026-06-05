@@ -10,6 +10,9 @@ extends Control
 @onready var subTotal = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Subtotal/SubtotalAmount
 @onready var taxes=$MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Taxes/TaxAmount
 @onready var LBLtotal = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal/TotalAmount
+
+const TICKET_SCENE = preload("res://Scenes/Ticket.tscn")
+
 var TotalSpent = 0.0
 var totalSizes=0
 var totalItemsSold=0
@@ -185,6 +188,14 @@ func _on_sale_button_pressed() -> void:
 	ProductManager.cart = cart
 	
 	get_tree().change_scene_to_file("res://Scenes/MainPos.tscn")
+	
+func _on_ticket_pressed() -> void:
+	var popup = TICKET_SCENE.instantiate()
+	var layer = CanvasLayer.new()
+	layer.layer = 10
+	add_child(layer)
+	layer.add_child(popup)
+	popup.tree_exiting.connect(layer.queue_free)
 
 
 func _on_btn_logout_pressed() -> void:
