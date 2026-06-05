@@ -578,6 +578,7 @@ text = "Card"
 horizontal_alignment = 1
 
 [node name="Paid" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=945572127]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_fonts/font = ExtResource("2_74tx3")
@@ -585,6 +586,7 @@ theme_override_font_sizes/font_size = 14
 text = "Paid"
 
 [node name="PaidInput" type="LineEdit" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1992678989]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2907203, 0.2907209, 0.29072046, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_j8myx")
@@ -592,6 +594,7 @@ placeholder_text = "0.00€"
 alignment = 1
 
 [node name="Change" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1825171875]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_fonts/font = ExtResource("2_74tx3")
@@ -599,6 +602,7 @@ theme_override_font_sizes/font_size = 14
 text = "Change"
 
 [node name="ChangeAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=450810303]
+visible = false
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)

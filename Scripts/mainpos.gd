@@ -22,6 +22,9 @@ const TICKET_SCENE = preload("res://Scenes/Ticket.tscn")
 @onready var btn_buy_now = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Buy
 @onready var btn_save_sale = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnSaveSale
 @onready var cartItemList = $MarginContainer/MainLayout/MarginContainer/Content/CartPanel/Cart/CenterContainer/MainCard/VBoxContainer/ScrollArea/ItemsList
+@onready var paid_label = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Paid
+@onready var change_label = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Change
+
 var first_btn
 var paymentSelect=""
 
@@ -128,14 +131,25 @@ func _update_change() -> void:
 	var paid = float(paid_input.text) if paid_input.text != "" else 0.0
 	var change = paid - current_total
 	change_amount.text = "%.2f €" % max(change, 0.0)
+	disableButtons()
 
 func _on_cart_total_changed(amount: float) -> void:
 	current_total = amount
 	payment_total.text = "%.2f €" % amount
 	_update_change()
+	
 func disableButtons():
-	var disable=(paymentSelect=="")
-	btn_buy_now.disabled=disable
+	if paymentSelect == "":
+		btn_buy_now.disabled=true
+	elif paymentSelect == "Cash":
+		var paid: float
+		if paid_input.text != "":
+			paid = float(paid_input.text)
+		else:
+			paid = 0.0
+		btn_buy_now.disabled = paid < current_total
+	else:
+		btn_buy_now.disabled = false
 	
 func _on_sales_pressed() -> void:
 	_set_active_tab(btn_sales)
@@ -161,6 +175,8 @@ func _on_buy_pressed() -> void:
 	cartTSCN.add_product(null, {})
 	for child in cartItemList.get_children():
 		child.queue_free()
+	paid_input.text = ""
+	change_amount.text = "0.00 €"
 
 func _on_btn_save_sale_pressed() -> void:
 	ProductManager.save_sale("SAVE")
@@ -169,11 +185,19 @@ func _on_btn_save_sale_pressed() -> void:
 func _on_btn_cash_pressed() -> void:
 	paymentSelect="Cash"
 	disableButtons()
+	paid_label.visible = true
+	paid_input.visible = true
+	change_label.visible = true
+	change_amount.visible = true
 
 
 func _on_btn_card_pressed() -> void:
 	paymentSelect="Card"
 	disableButtons()
+	paid_label.visible = false
+	paid_input.visible = false
+	change_label.visible = false
+	change_amount.visible = false
 	
 func _on_ticket_pressed() -> void:
 	var popup = TICKET_SCENE.instantiate()
