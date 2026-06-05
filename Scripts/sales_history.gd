@@ -116,19 +116,35 @@ func saleSelected(sale_data):
 		var line_total = float(prod.get("price", 0.0)) * int(prod.get("quantity", 1))
 		subtotal += line_total
 		
-		var dataProduct = [
-			str(prod.get("productName")),
-			str(prod.get("price")) + "€",
-			str(prod.get("quantity")),
-			str(snapped(line_total, 0.01)) + "€"
-		]
+		var name_lbl = Label.new()
+		name_lbl.text = str(prod.get("productName"))
+		name_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		name_lbl.add_theme_color_override("font_color", Color.BLACK)
+		row.add_child(name_lbl)
 		
-		for data in dataProduct:
-			var label = Label.new()
-			label.text = data
-			label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-			label.add_theme_color_override("font_color", Color.BLACK)
-			row.add_child(label)
+		var price_lbl = Label.new()
+		price_lbl.text = str(prod.get("price")) + "€"
+		price_lbl.custom_minimum_size = Vector2(98, 0)
+		price_lbl.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		price_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		price_lbl.add_theme_color_override("font_color", Color.BLACK)
+		row.add_child(price_lbl)
+		
+		var qty_lbl = Label.new()
+		qty_lbl.text = str(prod.get("quantity"))
+		qty_lbl.custom_minimum_size = Vector2(84, 0)
+		qty_lbl.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		qty_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		qty_lbl.add_theme_color_override("font_color", Color.BLACK)
+		row.add_child(qty_lbl)
+		
+		var total_lbl = Label.new()
+		total_lbl.text = str(snapped(line_total, 0.01)) + "€"
+		total_lbl.custom_minimum_size = Vector2(50, 0)
+		total_lbl.size_flags_horizontal = Control.SIZE_SHRINK_END
+		total_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		total_lbl.add_theme_color_override("font_color", Color.BLACK)
+		row.add_child(total_lbl)
 		
 		itemListSummary.add_child(row)
 
