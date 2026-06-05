@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cc3tj3ji6fn2c" path="res://Assets/Fonts/Helvetica.ttf" id="4_akoho"]
 [ext_resource type="Texture2D" uid="uid://cvra83mc5o3wu" path="res://Assets/Icons/off.png" id="4_gh28p"]
 [ext_resource type="PackedScene" uid="uid://b54xa6d3dtu6v" path="res://Scenes/SalesHList.tscn" id="4_ol7no"]
-[ext_resource type="PackedScene" path="res://Scenes/Summary.tscn" id="5_akoho"]
+[ext_resource type="PackedScene" uid="uid://bxbbvtnvjv1d2" path="res://Scenes/Summary.tscn" id="5_akoho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68xj4"]
 bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
