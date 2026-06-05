@@ -252,9 +252,6 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
-bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
-
 [node name="Stock" type="Control" unique_id=1141181362]
 layout_mode = 3
 anchors_preset = 15
@@ -773,11 +770,6 @@ theme_override_icons/icon = ExtResource("9_i2467")
 theme_override_styles/normal = SubResource("StyleBoxFlat_h6jeq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o6wxj")
 text = "Stock management"
-
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
 
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Sales" to="." method="_on_sales_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/History" to="." method="_on_history_pressed"]
