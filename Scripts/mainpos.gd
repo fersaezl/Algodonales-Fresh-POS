@@ -182,3 +182,7 @@ func _on_ticket_pressed() -> void:
 	add_child(layer)
 	layer.add_child(popup)
 	popup.tree_exiting.connect(layer.queue_free)
+
+
+func _on_btn_logout_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Login.tscn")

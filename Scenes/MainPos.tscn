@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="2_74tx3"]
 [ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_b30p1"]
 [ext_resource type="PackedScene" uid="uid://bxr4whmijjkgs" path="res://Scenes/Cart.tscn" id="2_p6x7q"]
+[ext_resource type="Texture2D" uid="uid://cvra83mc5o3wu" path="res://Assets/Icons/off.png" id="4_n6lp0"]
 [ext_resource type="Texture2D" uid="uid://gi67a860qfcu" path="res://Assets/Icons/billete-de-banco.png" id="5_kvcdn"]
 [ext_resource type="Texture2D" uid="uid://c8rm382q62xg1" path="res://Assets/Icons/tarjeta-de-credito.png" id="6_cic5l"]
 [ext_resource type="Texture2D" uid="uid://dvpoa7llfu1po" path="res://Assets/Icons/disquete.png" id="7_62unc"]
@@ -24,6 +25,26 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62unc"]
 bg_color = Color(1, 1, 1, 0.101960786)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjcuh"]
+content_margin_left = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgpfc"]
+content_margin_left = 5.0
+bg_color = Color(1, 1, 1, 0.3372549)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bckxv"]
+content_margin_left = 5.0
+bg_color = Color(1, 1, 1, 0.08627451)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -343,6 +364,17 @@ horizontal_alignment = 2
 layout_mode = 2
 horizontal_alignment = 2
 
+[node name="BtnLogout" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=861073664]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/icon_max_width = 40
+theme_override_icons/icon = ExtResource("4_n6lp0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bjcuh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sgpfc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bckxv")
+
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout" unique_id=419936859]
 layout_mode = 2
 size_flags_vertical = 3
@@ -648,6 +680,7 @@ text = "Cancel Sale"
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Sales" to="." method="_on_sales_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/History" to="." method="_on_history_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Stock" to="." method="_on_stock_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/BtnLogout" to="." method="_on_btn_logout_pressed"]
 [connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCash" to="." method="_on_btn_cash_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCard" to="." method="_on_btn_card_pressed"]
