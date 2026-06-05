@@ -192,7 +192,11 @@ func _on_sale_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/MainPos.tscn")
 	
 func _on_ticket_pressed() -> void:
+	if selectedSale == null:
+		return
 	var popup = TICKET_SCENE.instantiate()
+	if popup.has_method("set_historic_sale"):
+		popup.set_historic_sale(selectedSale)
 	var layer = CanvasLayer.new()
 	layer.layer = 10
 	add_child(layer)
