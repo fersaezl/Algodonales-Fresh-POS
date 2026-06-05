@@ -177,6 +177,7 @@ func loadCart():
 		
 func _on_buy_pressed() -> void:
 	save=false
+	ProductManager.update_stock_after_sale()
 	ProductManager.save_sale(paymentSelect)
 	ProductManager.cart.clear()
 	cartTSCN.add_product(null, {})
@@ -184,6 +185,7 @@ func _on_buy_pressed() -> void:
 		child.queue_free()
 	paid_input.text = ""
 	change_amount.text = "0.00 €"
+	load_products(current_btn.section_id if current_btn else "all", current_btn)
 
 func _on_btn_save_sale_pressed() -> void:
 	ProductManager.save_sale("SAVE")

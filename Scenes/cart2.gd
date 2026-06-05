@@ -137,9 +137,11 @@ func _build_row(prod_id, pro, qty: int, subtotal: float) -> void:
 	qty_lbl.add_theme_color_override("font_color", FONT_COLOR)
 
 	var plus_btn = Button.new()
-	plus_btn.text                = "+"
+	plus_btn.text = "+"
 	plus_btn.custom_minimum_size = Vector2(28, 28)
 	plus_btn.pressed.connect(_on_plus.bind(prod_id))
+	if qty >= int(pro.get("stock", 0)):
+		plus_btn.disabled = true
 
 	qty_box.add_child(minus_btn)
 	qty_box.add_child(qty_lbl)
@@ -174,6 +176,9 @@ func _on_minus(prod_id) -> void:
 
 func _on_plus(prod_id) -> void:
 	if not ProductManager.cart.has(prod_id):
+		return
+	var pro = ProductManager.searchProductByid(prod_id)
+	if pro and ProductManager.cart[prod_id] >= int(pro.get("stock", 0)):
 		return
 	ProductManager.cart[prod_id] += 1
 	await _refresh_display(ProductManager.cart)
