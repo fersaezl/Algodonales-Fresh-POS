@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cc3tj3ji6fn2c" path="res://Assets/Fonts/Helvetica.ttf" id="4_akoho"]
 [ext_resource type="Texture2D" uid="uid://cvra83mc5o3wu" path="res://Assets/Icons/off.png" id="4_gh28p"]
 [ext_resource type="PackedScene" uid="uid://b54xa6d3dtu6v" path="res://Scenes/SalesHList.tscn" id="4_ol7no"]
-[ext_resource type="PackedScene" uid="uid://bxbbvtnvjv1d2" path="res://Scenes/Summary.tscn" id="5_akoho"]
+[ext_resource type="PackedScene" path="res://Scenes/Summary.tscn" id="5_akoho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68xj4"]
 bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
@@ -81,17 +81,17 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2o2r"]
 bg_color = Color(0.101960786, 0.47843137, 0.078431375, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyxug"]
 bg_color = Color(0.21176471, 0.6784314, 0.16078432, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akoho"]
 bg_color = Color(1, 1, 1, 1)
