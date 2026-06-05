@@ -181,7 +181,9 @@ func _on_sale_button_pressed() -> void:
 	ProductManager.cart.clear()
 	var allProductsSale = selectedSale.get("cart").get("products")
 	var cart = {}
-	
+	if str(selectedSale.get("payment_method")) == "SAVE":
+		ProductManager.saveSaleId = int(selectedSale.get("sale_id"))
+
 	for prod in allProductsSale:
 		if prod.get("id") != 0:
 			cart[prod.get("id")] = prod.get("quantity")		

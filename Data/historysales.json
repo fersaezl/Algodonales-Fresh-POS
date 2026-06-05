@@ -28,29 +28,47 @@
 			"date": "05/06/2026",
 			"products": [
 				{
-					"id": 3,
+					"id": 3.0,
 					"price": 3.2,
 					"productName": "Sierra Tomato",
-					"quantity": 2
+					"quantity": 2.0
 				},
 				{
-					"id": 9,
+					"id": 9.0,
 					"price": 1.75,
 					"productName": "Courgette",
-					"quantity": 2
+					"quantity": 2.0
 				},
 				{
-					"id": 5,
+					"id": 5.0,
 					"price": 2.0,
 					"productName": "Orange",
-					"quantity": 2
+					"quantity": 2.0
 				}
 			],
 			"total": 13.9
 		},
 		"payment_method": "Cash",
-		"sale_id": 2,
-		"ticket_number": 2,
+		"sale_id": 2.0,
+		"ticket_number": 2.0,
+		"user": ""
+	},
+	{
+		"cart": {
+			"date": "05/06/2026",
+			"products": [
+				{
+					"id": 5.0,
+					"price": 2.0,
+					"productName": "Orange",
+					"quantity": 2.0
+				}
+			],
+			"total": 4.0
+		},
+		"payment_method": "Cash",
+		"sale_id": 3.0,
+		"ticket_number": 3.0,
 		"user": ""
 	}
 ]

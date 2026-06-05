@@ -27,6 +27,8 @@ const TICKET_SCENE = preload("res://Scenes/Ticket.tscn")
 
 var first_btn
 var paymentSelect=""
+var save=false
+
 
 func _ready() -> void:
 	load_categories()
@@ -39,6 +41,8 @@ func _ready() -> void:
 	disableButtons()
 	if ProductManager.cart!=null:
 		loadCart()
+	if save==true:
+		print('UwU')
 func load_categories() -> void:
 	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
 	if file == null:
@@ -165,11 +169,14 @@ func _on_stock_pressed() -> void:
 
 func loadCart():
 	var cart = ProductManager.cart
+	
 	if cart != null and not cart.is_empty():
+		save=true
 		var product = ProductManager.searchProductByid(int( cart.keys()[0]))
 		cartTSCN.add_product(product, cart)
-				
+		
 func _on_buy_pressed() -> void:
+	save=false
 	ProductManager.save_sale(paymentSelect)
 	ProductManager.cart.clear()
 	cartTSCN.add_product(null, {})
@@ -210,3 +217,30 @@ func _on_ticket_pressed() -> void:
 
 func _on_btn_logout_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
+
+
+func _on_btn_cancel_pressed() -> void:
+	ProductManager.cart.clear()
+	var file = FileAccess.open("res://Data/historysales.json", FileAccess.READ)
+	var sales = JSON.parse_string(file.get_as_text())
+	file.close()
+	
+	if sales == null:
+		return
+
+	for i in range(sales.size()):
+		if int(sales[i].get("sale_id")) == ProductManager.saveSaleId:
+			sales.remove_at(i)
+			break
+
+	var write_file = FileAccess.open("res://Data/historysales.json", FileAccess.WRITE)
+	if write_file != null:
+		write_file.store_string(JSON.stringify(sales, "\t"))
+		write_file.close()
+		
+	cartTSCN.add_product(null, {})
+	for child in cartItemList.get_children():
+		child.queue_free()
+	paid_input.text = ""
+	change_amount.text = "0.00 €"
+	

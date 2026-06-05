@@ -9,6 +9,7 @@ var current_user: String = ""
 var discount: float = 0.0
 var tax_rate: float = 0.21
 var ticket_number: int = 1
+var saveSaleId
 
 func _ready():
 	products=readProducts()
