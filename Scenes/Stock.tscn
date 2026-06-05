@@ -17,7 +17,6 @@ bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjxx2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fb2v"]
-content_margin_left = 5.0
 bg_color = Color(1, 1, 1, 0.08627451)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -38,6 +37,14 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmu2k"]
 content_margin_left = 5.0
 bg_color = Color(1, 1, 1, 0.3372549)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ie0of"]
+content_margin_left = 5.0
+bg_color = Color(1, 1, 1, 0.08627451)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -410,7 +417,7 @@ theme_override_constants/icon_max_width = 40
 theme_override_icons/icon = ExtResource("4_3rrl5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_uhdnk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_tmu2k")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6fb2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ie0of")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout" unique_id=418237664]
 layout_mode = 2
