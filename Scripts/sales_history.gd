@@ -181,3 +181,7 @@ func _on_sale_button_pressed() -> void:
 	ProductManager.cart = cart
 	
 	get_tree().change_scene_to_file("res://Scenes/MainPos.tscn")
+
+
+func _on_btn_logout_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
