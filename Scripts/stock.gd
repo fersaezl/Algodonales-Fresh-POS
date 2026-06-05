@@ -254,7 +254,7 @@ func _on_btn_out_pressed() -> void:
 	current_stock_filter = "out"
 	_apply_filters()
 
-func _update_stock_counters() -> void:
+func _update_stock_counters():
 	var all_products = ProductManager.products
 	
 	var total_count = all_products.size()
@@ -279,16 +279,22 @@ func _update_stock_counters() -> void:
 	
 	inventory_value_label.text = "%.2f €" % total_value
 
-func _on_modify_stock_pressed() -> void:
+func _on_modify_stock_pressed():
 	var popup_instance = MODIFY_STOCK_POPUP.instantiate()
 	add_child(popup_instance)
 	
 	popup_instance.stock_updated.connect(_on_popup_stock_updated)
 
 func _on_popup_stock_updated():
+	_save_products_to_json()
 	_apply_filters()
 	_update_stock_counters()
 
-
 func _on_btn_logout_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
+
+func _save_products_to_json():
+	var file = FileAccess.open("res://Data/products.json", FileAccess.WRITE)
+	var json_string = JSON.stringify(ProductManager.products, "\t")
+	file.store_string(json_string)
+	file.close()
