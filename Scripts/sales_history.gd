@@ -49,8 +49,7 @@ func historysales(searchText , secondCondition ):
 			if !str(sale.get("user")).to_lower().contains(secondCondition.to_lower()):
 				continue
 
-		totalSizes=str(sales.size())
-		%OrdersAmount.text=str(sales.size())
+		totalSizes += 1
 		var row=HBoxContainer.new()
 		row.mouse_filter = Control.MOUSE_FILTER_STOP
 		row.gui_input.connect(func(event): _on_row_clicked(event, sale))
@@ -78,6 +77,12 @@ func historysales(searchText , secondCondition ):
 		items_list.add_child(row)
 		averageSales = TotalSpent / int(totalSizes)
 		%TicketAmount.text = "€" + str(snapped(averageSales, 0.01))
+	%OrdersAmount.text = str(totalSizes)	
+	if(totalSizes==0):
+			%OrdersAmount.text="0€"
+			%TicketAmount.text ="0€"
+			%ItemsSold.text ="0€"
+			%SalesAmount.text ="0€"	
 		
 func _on_row_clicked(event, sale_data):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -124,12 +129,12 @@ func saleSelected(sale_data):
 		
 		itemListSummary.add_child(row)
 
-	var tax = subtotal * 0.21
-	var total = subtotal + tax
+	var final_total = subtotal
+	var tax = final_total - (final_total/1.21)
 
-	subTotal.text = str(snapped(subtotal, 0.01)) + " €"
+	subTotal.text = str(snapped(final_total/1.21, 0.01)) + " €"
 	taxes.text = str(snapped(tax, 0.01)) + " €"
-	LBLtotal.text = str(snapped(total, 0.01)) + " €"
+	LBLtotal.text = str(snapped(final_total, 0.01)) + " €"
 	
 	
 func _process(_delta) -> void:
@@ -162,8 +167,7 @@ func _on_stock_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	historysales(%SearchBar.text, %SearchBar2.text)
-
-
+	%OrdersAmount.text=str(totalSizes)
 func _on_button_2_pressed() -> void:
 	%SearchBar.text=""
 	%SearchBar2.text=""

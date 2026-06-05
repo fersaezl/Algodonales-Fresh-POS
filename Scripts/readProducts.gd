@@ -81,7 +81,7 @@ func save_sale(payment):
 		var dataPROD=searchProductByid(int(prod))
 		if dataPROD!=null:
 			var price=dataPROD.get("price")
-			total+=snapped((price*quantity)*1.21,0.01)
+			total+=snapped((price*quantity),0.01)
 			var prodCart={
 				"id":int(prod),
 				"productName":dataPROD.get("productName"),
