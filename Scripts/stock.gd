@@ -288,3 +288,7 @@ func _on_modify_stock_pressed() -> void:
 func _on_popup_stock_updated():
 	_apply_filters()
 	_update_stock_counters()
+
+
+func _on_btn_logout_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
