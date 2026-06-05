@@ -7,11 +7,14 @@ extends Control
 @onready var username_label = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection/UserName
 @onready var datetime_label = $MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/RightSection/DateTime
 @onready var itemListSummary=$MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/ScrollArea/ItemsList
-
+@onready var subTotal = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Subtotal/SubtotalAmount
+@onready var taxes=$MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/LeftTotals/Taxes/TaxAmount
+@onready var LBLtotal = $MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Summary/CenterContainer/MainCard/VBoxContainer/FooterPanel/FooterRow/RightTotal/TotalAmount
 var TotalSpent = 0.0
 var totalSizes=0
 var totalItemsSold=0
 var averageSales
+var selectedSale
 func _ready():
 	historysales("","")
 	username_label.text = ProductManager.current_user
@@ -24,6 +27,10 @@ func readHistory():
 	return parseContent	
 func historysales(searchText , secondCondition ):
 	var sales = readHistory()
+	TotalSpent = 0.0
+	totalSizes=0
+	averageSales=0		
+	totalItemsSold=0	
 
 	if sales == null:
 		return
@@ -51,7 +58,7 @@ func historysales(searchText , secondCondition ):
 		var dataSale=[
 			str(sale.get("sale_id")),
 			str(cart_data.get("date", "02/06/2026")),
-			str(sale.get("user","pepe")),
+			str(sale.get("user")),
 			str(cart_data.get("products").size()),
 			str(cart_data.get("total", 0.0)),
 			str(sale.get("payment_method"))
@@ -78,22 +85,34 @@ func _on_row_clicked(event, sale_data):
 		
 func saleSelected(sale_data):
 	var cartSale = sale_data.get("cart")
+	selectedSale = sale_data
 	%NumberInvoice.text = "INV-" + str(sale_data.get("sale_id"))
 	%DateLbl.text = str(cartSale.get("date", "02/06/2026"))
 	%Username.text = sale_data.get("user")
-	%CardCash.text=sale_data.get("payment_method")
+	%CardCash.text = sale_data.get("payment_method")
+	
 	for child in itemListSummary.get_children():
 		child.queue_free()
 		
 	var productsDataList = cartSale.get("products")
 	
+	if(sale_data.get("payment_method") == "SAVE"):
+		%saleButton.visible = true
+	else:
+		%saleButton.visible = false
+
+	var subtotal = 0.0
+
 	for prod in productsDataList:
 		var row = HBoxContainer.new()
+		var line_total = float(prod.get("price", 0.0)) * int(prod.get("quantity", 1))
+		subtotal += line_total
+		
 		var dataProduct = [
 			str(prod.get("productName")),
-			 str( prod.get("price"))+"€",
+			str(prod.get("price")) + "€",
 			str(prod.get("quantity")),
-			 str(snapped( prod.get("price") * prod.get("quantity"), 0.01))+"€"
+			str(snapped(line_total, 0.01)) + "€"
 		]
 		
 		for data in dataProduct:
@@ -102,8 +121,15 @@ func saleSelected(sale_data):
 			label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			label.add_theme_color_override("font_color", Color.BLACK)
 			row.add_child(label)
-			
+		
 		itemListSummary.add_child(row)
+
+	var tax = subtotal * 0.21
+	var total = subtotal + tax
+
+	subTotal.text = str(snapped(subtotal, 0.01)) + " €"
+	taxes.text = str(snapped(tax, 0.01)) + " €"
+	LBLtotal.text = str(snapped(total, 0.01)) + " €"
 	
 	
 func _process(_delta) -> void:
@@ -142,3 +168,16 @@ func _on_button_2_pressed() -> void:
 	%SearchBar.text=""
 	%SearchBar2.text=""
 	historysales("","")
+
+
+func _on_sale_button_pressed() -> void:
+	ProductManager.cart.clear()
+	var allProductsSale = selectedSale.get("cart").get("products")
+	var cart = {}
+	
+	for prod in allProductsSale:
+		if prod.get("id") != 0:
+			cart[prod.get("id")] = prod.get("quantity")		
+	ProductManager.cart = cart
+	
+	get_tree().change_scene_to_file("res://Scenes/MainPos.tscn")

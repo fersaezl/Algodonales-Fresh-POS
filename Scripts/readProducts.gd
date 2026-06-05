@@ -47,10 +47,10 @@ func searchProducts(string):
 		print("No hay productos con eses filtro")
 func searchProductByid(id):
 	for pro in products:
-		if(pro.id==id):
+		if(int(pro.id)==int(id)):
 			return pro
 func save_sale(payment):
-	if (cart==null):
+	if (cart==null or cart.is_empty()):
 		return
 	var history = readHistory()
 	var arrayCartProducts=[]
@@ -70,15 +70,16 @@ func save_sale(payment):
 				"price":price
 			}
 			arrayCartProducts.append(prodCart)
-		
+	var t = Time.get_datetime_dict_from_system()
+	var formatedDate = "%02d/%02d/%04d" % [t.day, t.month, t.year]
 	var new_sale={
 		"sale_id": int(next_id),
-		"user": "pepe",#cambiarlo por currentuser cuando este el login implemenntadi
+		"user": current_user,
 		"payment_method":payment,
 		"cart": {
 			"products":arrayCartProducts,
 			"total":total,
-			"date":"03/06/2026"
+			"date":formatedDate
 		}
 	}
 	history.append(new_sale)

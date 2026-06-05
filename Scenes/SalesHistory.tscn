@@ -108,6 +108,15 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk18p"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
 bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
 
@@ -526,6 +535,14 @@ theme_override_fonts/font = ExtResource("3_4amme")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gh28p")
 text = "Print Invoice"
 
+[node name="saleButton" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1365284997]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kk18p")
+text = "SALE"
+
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
@@ -537,3 +554,4 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
 [connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/HBoxContainer/FiltersButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/HBoxContainer/ClearButton" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/saleButton" to="." method="_on_sale_button_pressed"]
