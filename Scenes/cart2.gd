@@ -26,8 +26,8 @@ func _on_discount_applied(amount: float) -> void:
 
 func _update_footer() -> void:
 	var subtotal = _get_subtotal()
-	var tax      = (subtotal - discount) * tax_rate
-	var total    = subtotal - discount + tax
+	var tax      = subtotal * tax_rate
+	var total    = (subtotal - discount) + tax
 	%SubtotalAmount.text = "%.2f €" % subtotal
 	%DiscountAmount.text = "%.2f €" % discount
 	%TaxAmount.text      = "%.2f €" % tax
@@ -40,7 +40,7 @@ func _get_subtotal() -> float:
 		var pro = ProductManager.searchProductByid(prod_id)
 		if pro:
 			total += float(pro.price) * ProductManager.cart[prod_id]
-	return total
+	return total / (1.0 + tax_rate)
 
 func _refresh_display(cart: Dictionary) -> void:
 	for child in items_list.get_children():

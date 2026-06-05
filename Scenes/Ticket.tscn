@@ -170,7 +170,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jpv5j")
 text = "Cancel"
 
 [node name="MainCard" type="Panel" parent="CenterContainer" unique_id=1600963417]
-custom_minimum_size = Vector2(420, 600)
+custom_minimum_size = Vector2(431.855, 600)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pprrh")
 
@@ -227,36 +227,37 @@ text = "Cashier: --"
 [node name="HSeparator2" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=449258251]
 layout_mode = 2
 
-[node name="ColumnHeaders" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=2053580299]
+[node name="ColumnHeaders" type="GridContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=49478380]
 layout_mode = 2
-theme_override_constants/separation = 8
+columns = 4
 
 [node name="ColProduct" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=187643081]
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qpexw")
 theme_override_font_sizes/font_size = 12
 text = "Product"
 
-[node name="ColQty" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=1235159777]
+[node name="ColPrice" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=1235159777]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+theme_override_font_sizes/font_size = 12
+text = "Price"
+
+[node name="ColQty" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=663571489]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qpexw")
 theme_override_font_sizes/font_size = 12
 text = "Qty"
 
-[node name="ColUnit" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=663571489]
-layout_mode = 2
-size_flags_horizontal = 8
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_qpexw")
-theme_override_font_sizes/font_size = 12
-text = "Unit"
-
 [node name="ColSub" type="Label" parent="CenterContainer/MainCard/VBoxContainer/ColumnHeaders" unique_id=1535956824]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qpexw")
 theme_override_font_sizes/font_size = 12
@@ -265,15 +266,42 @@ text = "Subtotal"
 [node name="HSeparator3" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1204230289]
 layout_mode = 2
 
-[node name="ItemsList" type="VBoxContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=261754816]
+[node name="ItemsList" type="GridContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=103206877]
 layout_mode = 2
-theme_override_constants/separation = 6
+columns = 4
 
 [node name="HSeparator4" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=84650]
 layout_mode = 2
 
-[node name="TotalRow" type="HBoxContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=768811183]
+[node name="TotalRow" type="GridContainer" parent="CenterContainer/MainCard/VBoxContainer" unique_id=40674069]
 layout_mode = 2
+columns = 2
+
+[node name="BaseLbl" type="Label" parent="CenterContainer/MainCard/VBoxContainer/TotalRow" unique_id=301812739]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+text = "TAXABLE BASE"
+
+[node name="AmountBase" type="Label" parent="CenterContainer/MainCard/VBoxContainer/TotalRow" unique_id=2100085745]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+text = "0.00 €"
+
+[node name="IVALbl" type="Label" parent="CenterContainer/MainCard/VBoxContainer/TotalRow" unique_id=1498250352]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+text = "I.V.A."
+
+[node name="PercentLbl" type="Label" parent="CenterContainer/MainCard/VBoxContainer/TotalRow" unique_id=1331504690]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qpexw")
+text = "21 %"
 
 [node name="TotalLbl" type="Label" parent="CenterContainer/MainCard/VBoxContainer/TotalRow" unique_id=961396926]
 layout_mode = 2
@@ -287,7 +315,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qpexw")
-text = "0.00€"
+text = "0.00 €"
 
 [node name="HSeparator5" type="HSeparator" parent="CenterContainer/MainCard/VBoxContainer" unique_id=1796431354]
 layout_mode = 2
