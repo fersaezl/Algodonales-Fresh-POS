@@ -11,7 +11,9 @@ config_version=5
 [application]
 
 config/name="Algodonales Fresh POS"
+run/main_scene="uid://7cb4akfctqwg"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/image="uid://ch7fimfmg45hq"
 config/icon="uid://cvx71gcf1wfd7"
 
 [autoload]

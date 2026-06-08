@@ -18,8 +18,10 @@ func _ready():
 	price.text = price_text + " € / ud"
 	icon.texture = button_icon
 	icon.custom_minimum_size = icon_size
-	
-	
+	if pro != null and int(pro.get("stock", 1)) <= 0:
+		label.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6, 1))
+		price.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6, 1))
+		$Button.disabled = true
 
 
 func _on_button_pressed() -> void:

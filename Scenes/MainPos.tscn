@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://qjmd2hn4xs13" path="res://Assets/Fonts/Helvetica-Bold.ttf" id="2_74tx3"]
 [ext_resource type="Texture2D" uid="uid://ba5yhahsdga5a" path="res://Assets/Logo/Logo AF.png" id="2_b30p1"]
 [ext_resource type="PackedScene" uid="uid://bxr4whmijjkgs" path="res://Scenes/Cart.tscn" id="2_p6x7q"]
+[ext_resource type="Texture2D" uid="uid://cvra83mc5o3wu" path="res://Assets/Icons/off.png" id="4_n6lp0"]
 [ext_resource type="Texture2D" uid="uid://gi67a860qfcu" path="res://Assets/Icons/billete-de-banco.png" id="5_kvcdn"]
 [ext_resource type="Texture2D" uid="uid://c8rm382q62xg1" path="res://Assets/Icons/tarjeta-de-credito.png" id="6_cic5l"]
 [ext_resource type="Texture2D" uid="uid://dvpoa7llfu1po" path="res://Assets/Icons/disquete.png" id="7_62unc"]
@@ -24,6 +25,26 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62unc"]
 bg_color = Color(1, 1, 1, 0.101960786)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjcuh"]
+content_margin_left = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgpfc"]
+content_margin_left = 5.0
+bg_color = Color(1, 1, 1, 0.3372549)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bckxv"]
+content_margin_left = 5.0
+bg_color = Color(1, 1, 1, 0.08627451)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -74,6 +95,42 @@ corner_radius_bottom_left = 8
 expand_margin_top = 5.0
 expand_margin_bottom = 5.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6lp0"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8509804, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75647"]
+bg_color = Color(0.8039216, 0.9254902, 0.8039216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qu7d"]
+bg_color = Color(0.9019608, 0.9607843, 0.9019608, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.36862746, 0.7019608, 0.36862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8myx"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 1
@@ -88,20 +145,22 @@ corner_radius_bottom_left = 8
 expand_margin_top = 6.0
 expand_margin_bottom = 6.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6lp0"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.8, 0.8509804, 0.8, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3qaj7"]
 bg_color = Color(0.14901961, 0.6, 0.101960786, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_at57f"]
+bg_color = Color(0.101960786, 0.47843137, 0.078431375, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ag2i"]
+bg_color = Color(0.21176471, 0.6784314, 0.16078432, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -115,6 +174,32 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.8, 0.8509804, 0.8, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwt01"]
+content_margin_left = 12.0
+bg_color = Color(0.8039216, 0.9254902, 0.8039216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.14901961, 0.6, 0.14901961, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yolhp"]
+content_margin_left = 12.0
+bg_color = Color(0.9019608, 0.9607843, 0.9019608, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.36862746, 0.7019608, 0.36862746, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -134,8 +219,33 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p6x7q"]
-bg_color = Color(0.12156863, 0.14117648, 0.16078432, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vdg8"]
+content_margin_left = 40.0
+content_margin_right = 40.0
+bg_color = Color(0.96862745, 0.8039216, 0.8039216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7490196, 0.09411765, 0.09411765, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryd1n"]
+content_margin_left = 40.0
+content_margin_right = 40.0
+bg_color = Color(1, 0.92156863, 0.92156863, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.85490197, 0.14117648, 0.14117648, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="MainPos" type="Control" unique_id=1141181362]
 layout_mode = 3
@@ -254,6 +364,17 @@ horizontal_alignment = 2
 layout_mode = 2
 horizontal_alignment = 2
 
+[node name="BtnLogout" type="Button" parent="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer" unique_id=861073664]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/icon_max_width = 40
+theme_override_icons/icon = ExtResource("4_n6lp0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bjcuh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sgpfc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bckxv")
+
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainLayout" unique_id=419936859]
 layout_mode = 2
 size_flags_vertical = 3
@@ -368,35 +489,6 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
 theme_override_font_sizes/font_size = 28
 
-[node name="Paid" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=945572127]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
-theme_override_fonts/font = ExtResource("2_74tx3")
-theme_override_font_sizes/font_size = 14
-text = "Paid"
-
-[node name="PaidInput" type="LineEdit" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1992678989]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.2907203, 0.2907209, 0.29072046, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_j8myx")
-placeholder_text = "0.00€"
-alignment = 1
-
-[node name="Change" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1825171875]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
-theme_override_fonts/font = ExtResource("2_74tx3")
-theme_override_font_sizes/font_size = 14
-text = "Change"
-
-[node name="ChangeAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=450810303]
-custom_minimum_size = Vector2(0, 45)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
-theme_override_font_sizes/font_size = 22
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="PaymentMethod" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1135763512]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
@@ -417,6 +509,8 @@ theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1
 theme_override_fonts/font = ExtResource("2_74tx3")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_n6lp0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_75647")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qu7d")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCash" unique_id=804754020]
 layout_mode = 1
@@ -453,6 +547,8 @@ theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1
 theme_override_fonts/font = ExtResource("2_74tx3")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_n6lp0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_75647")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qu7d")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCard" unique_id=91955568]
 layout_mode = 1
@@ -481,6 +577,39 @@ theme_override_font_sizes/font_size = 14
 text = "Card"
 horizontal_alignment = 1
 
+[node name="Paid" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=945572127]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("2_74tx3")
+theme_override_font_sizes/font_size = 14
+text = "Paid"
+
+[node name="PaidInput" type="LineEdit" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1992678989]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2907203, 0.2907209, 0.29072046, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_j8myx")
+placeholder_text = "0.00€"
+alignment = 1
+
+[node name="Change" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1825171875]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_fonts/font = ExtResource("2_74tx3")
+theme_override_font_sizes/font_size = 14
+text = "Change"
+
+[node name="ChangeAmount" type="Label" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=450810303]
+visible = false
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14901961, 0.6, 0.14901961, 1)
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Buy" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=1109367928]
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
@@ -488,6 +617,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_74tx3")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_3qaj7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_at57f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6ag2i")
 text = "Buy Now"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=456872630]
@@ -499,11 +630,18 @@ custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_focus_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_pressed_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_hover_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_disabled_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_constants/icon_max_width = 20
 theme_override_fonts/font = ExtResource("2_74tx3")
 theme_override_font_sizes/font_size = 14
 theme_override_icons/icon = ExtResource("7_62unc")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gh4ev")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hwt01")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yolhp")
 text = "Save Sale"
 
 [node name="BtnTicket" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1453011743]
@@ -511,35 +649,47 @@ custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_focus_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_pressed_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_hover_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
+theme_override_colors/font_disabled_color = Color(0.101960786, 0.23921569, 0.101960786, 1)
 theme_override_constants/h_separation = 0
 theme_override_constants/icon_max_width = 20
 theme_override_fonts/font = ExtResource("2_74tx3")
 theme_override_font_sizes/font_size = 14
 theme_override_icons/icon = ExtResource("8_ni1tk")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gh4ev")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hwt01")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yolhp")
 text = "Ticket"
 
 [node name="BtnCancel" type="Button" parent="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer" unique_id=433529694]
 custom_minimum_size = Vector2(0, 44)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_focus_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_pressed_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_disabled_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
 theme_override_constants/icon_max_width = 20
 theme_override_fonts/font = ExtResource("2_74tx3")
 theme_override_icons/icon = ExtResource("9_j8myx")
 theme_override_styles/normal = SubResource("StyleBoxFlat_g6wl0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1vdg8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ryd1n")
 text = "Cancel Sale"
-
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MainLayout" unique_id=1516869984]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_p6x7q")
 
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Sales" to="." method="_on_sales_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/History" to="." method="_on_history_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/MenuSection/Stock" to="." method="_on_stock_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/TopBar/MarginContainer/HBoxContainer/BtnLogout" to="." method="_on_btn_logout_pressed"]
 [connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/ProductsPanel/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]
-[connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/PaidInput" to="." method="_on_paid_input_text_changed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCash" to="." method="_on_btn_cash_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Methods/BtnCard" to="." method="_on_btn_card_pressed"]
+[connection signal="text_changed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/PaidInput" to="." method="_on_paid_input_text_changed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/Buy" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnSaveSale" to="." method="_on_btn_save_sale_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/HBoxContainer/BtnTicket" to="." method="_on_ticket_pressed"]
+[connection signal="pressed" from="MarginContainer/MainLayout/MarginContainer/Content/PaymentPanel/MarginContainer/VBoxContainer/BtnCancel" to="." method="_on_btn_cancel_pressed"]

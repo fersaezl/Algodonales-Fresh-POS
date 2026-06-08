@@ -44,12 +44,12 @@ expand_margin_left = 10.0
 expand_margin_right = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvd8d"]
-bg_color = Color(1, 0, 0, 1)
+bg_color = Color(0.96862745, 0.8039216, 0.8039216, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.92156863, 0, 0, 1)
+border_color = Color(0.7490196, 0.09411765, 0.09411765, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -58,12 +58,12 @@ expand_margin_left = 10.0
 expand_margin_right = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2bjf"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(1, 0.92156863, 0.92156863, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.92156863, 0, 0, 1)
+border_color = Color(0.85490197, 0.14117648, 0.14117648, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -104,7 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainCard" type="Panel" parent="CenterContainer" unique_id=1438550758]
-custom_minimum_size = Vector2(406, 520)
+custom_minimum_size = Vector2(406, 564)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_puk5m")
 
@@ -167,7 +167,9 @@ size_flags_horizontal = 3
 [node name="ClearBtn" type="Button" parent="CenterContainer/MainCard/VBoxContainer/HeaderPanel/MarginContainer/HeaderRow" unique_id=652446622]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1764706, 0.3019608, 0.1764706, 1)
-theme_override_colors/font_hover_color = Color(0.92156863, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.7490196, 0.09803922, 0.09803922, 1)
 theme_override_fonts/font = ExtResource("1_puk5m")
 theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxFlat_i5iil")

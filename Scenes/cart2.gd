@@ -26,8 +26,8 @@ func _on_discount_applied(amount: float) -> void:
 
 func _update_footer() -> void:
 	var subtotal = _get_subtotal()
-	var tax      = (subtotal - discount) * tax_rate
-	var total    = subtotal - discount + tax
+	var tax      = subtotal * tax_rate
+	var total    = (subtotal - discount) + tax
 	%SubtotalAmount.text = "%.2f €" % subtotal
 	%DiscountAmount.text = "%.2f €" % discount
 	%TaxAmount.text      = "%.2f €" % tax
@@ -40,7 +40,7 @@ func _get_subtotal() -> float:
 		var pro = ProductManager.searchProductByid(prod_id)
 		if pro:
 			total += float(pro.price) * ProductManager.cart[prod_id]
-	return total
+	return total / (1.0 + tax_rate)
 
 func _refresh_display(cart: Dictionary) -> void:
 	for child in items_list.get_children():
@@ -137,9 +137,11 @@ func _build_row(prod_id, pro, qty: int, subtotal: float) -> void:
 	qty_lbl.add_theme_color_override("font_color", FONT_COLOR)
 
 	var plus_btn = Button.new()
-	plus_btn.text                = "+"
+	plus_btn.text = "+"
 	plus_btn.custom_minimum_size = Vector2(28, 28)
 	plus_btn.pressed.connect(_on_plus.bind(prod_id))
+	if qty >= int(pro.get("stock", 0)):
+		plus_btn.disabled = true
 
 	qty_box.add_child(minus_btn)
 	qty_box.add_child(qty_lbl)
@@ -174,6 +176,9 @@ func _on_minus(prod_id) -> void:
 
 func _on_plus(prod_id) -> void:
 	if not ProductManager.cart.has(prod_id):
+		return
+	var pro = ProductManager.searchProductByid(prod_id)
+	if pro and ProductManager.cart[prod_id] >= int(pro.get("stock", 0)):
 		return
 	ProductManager.cart[prod_id] += 1
 	await _refresh_display(ProductManager.cart)
