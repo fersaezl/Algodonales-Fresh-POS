@@ -223,7 +223,7 @@ func _on_btn_logout_pressed() -> void:
 
 func _on_btn_cancel_pressed() -> void:
 	ProductManager.cart.clear()
-	var file = FileAccess.open("res://Data/historysales.json", FileAccess.READ)
+	var file = FileAccess.open("user://historysales.json", FileAccess.READ)
 	var sales = JSON.parse_string(file.get_as_text())
 	file.close()
 	
@@ -235,7 +235,7 @@ func _on_btn_cancel_pressed() -> void:
 			sales.remove_at(i)
 			break
 
-	var write_file = FileAccess.open("res://Data/historysales.json", FileAccess.WRITE)
+	var write_file = FileAccess.open("user://historysales.json", FileAccess.WRITE)
 	if write_file != null:
 		write_file.store_string(JSON.stringify(sales, "\t"))
 		write_file.close()

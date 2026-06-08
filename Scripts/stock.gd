@@ -294,7 +294,7 @@ func _on_btn_logout_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
 
 func _save_products_to_json():
-	var file = FileAccess.open("res://Data/products.json", FileAccess.WRITE)
+	var file = FileAccess.open("user://products.json", FileAccess.WRITE)
 	var json_string = JSON.stringify(ProductManager.products, "\t")
 	file.store_string(json_string)
 	file.close()

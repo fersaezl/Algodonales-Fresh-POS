@@ -122,14 +122,18 @@ func _capture_main_card() -> Image:
 func _on_btn_download_pressed() -> void:
 	var img = await _capture_main_card()
 	var current_num = int(historic_data.get("ticket_number", historic_data.get("sale_id", ProductManager.ticket_number))) if is_historic else ProductManager.ticket_number
-	var path = OS.get_user_data_dir() + "/ticket_%04d.png" % current_num
-	img.save_png(path)
-	OS.shell_open(OS.get_user_data_dir())
-	
-	if not is_historic:
-		ProductManager.save_sale("cash") 
-	
-	queue_free()
+	if OS.get_name() == "Web":
+		var png_data = img.save_png_to_buffer()
+		JavaScriptBridge.download_buffer(png_data, "ticket_%04d.png" % current_num, "image/png")
+	else:
+		var path = OS.get_user_data_dir() + "/ticket_%04d.png" % current_num
+		img.save_png(path)
+		OS.shell_open(OS.get_user_data_dir())
+		
+		if not is_historic:
+			ProductManager.save_sale("cash")
+			
+		queue_free()
 
 func _on_btn_cancel_pressed() -> void:
 	queue_free()

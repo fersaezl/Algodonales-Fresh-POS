@@ -12,6 +12,7 @@ var ticket_number: int = 1
 var saveSaleId
 
 func _ready():
+	_init_user_data()
 	products=readProducts()
 	sections=readSections()
 	_update_ticket_number_from_history()
@@ -28,19 +29,19 @@ func _update_ticket_number_from_history():
 		ticket_number = 1
 
 func readProducts():
-	var file = FileAccess.open("res://Data/products.json", FileAccess.READ)
+	var file = FileAccess.open("user://products.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var parseContent=JSON.parse_string(content)
 	return parseContent
 	
 func readSections():
-	var file = FileAccess.open("res://Data/sections.json", FileAccess.READ)
+	var file = FileAccess.open("user://sections.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var parseContent=JSON.parse_string(content)
 	return parseContent
 	
 func readHistory():
-	var file = FileAccess.open("res://Data/historysales.json", FileAccess.READ)
+	var file = FileAccess.open("user://historysales.json", FileAccess.READ)
 	if file == null:
 		return []
 	var content = file.get_as_text()
@@ -107,7 +108,7 @@ func save_sale(payment):
 	}
 	history.append(new_sale)
 	
-	var file = FileAccess.open("res://Data/historysales.json", FileAccess.WRITE)
+	var file = FileAccess.open("user://historysales.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(history, "\t"))
 	file.close()
 	
@@ -132,6 +133,18 @@ func update_stock_after_sale() -> void:
 			if int(product["id"]) == int(prod_id):
 				product["stock"] = int(product["stock"]) - quantity
 				break
-	var file = FileAccess.open("res://Data/products.json", FileAccess.WRITE)
+	var file = FileAccess.open("user://products.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(products, "\t"))
 	file.close()
+	
+func _init_user_data():
+	var files = ["products.json", "sections.json", "historysales.json"]
+	for f in files:
+		if not FileAccess.file_exists("user://" + f):
+			var src = FileAccess.open("res://Data/" + f, FileAccess.READ)
+			if src:
+				var content = src.get_as_text()
+				src.close()
+				var dst = FileAccess.open("user://" + f, FileAccess.WRITE)
+				dst.store_string(content)
+				dst.close()

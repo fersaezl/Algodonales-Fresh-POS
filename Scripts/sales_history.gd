@@ -24,7 +24,7 @@ func _ready():
 	_set_active_tab(btn_history)
 
 func readHistory():
-	var file = FileAccess.open("res://Data/historysales.json", FileAccess.READ)
+	var file = FileAccess.open("user://historysales.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var parseContent=JSON.parse_string(content)
 	return parseContent	
