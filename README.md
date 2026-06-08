@@ -1,13 +1,13 @@
 # Project: Algodonales Fresh POS
 
 ### Status
-In Development
+Completed
 
 ### Genre
 Point of Sale System (POS)
 
 ### Platform
-Desktop Application
+Desktop · Web (itch.io)
 
 ### Engine
 Godot 4
